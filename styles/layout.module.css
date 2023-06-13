@@ -6,15 +6,16 @@
     "footer" 2rem;
 }
 
-.navbar {
+.layout > .navbar {
   grid-area: navbar;
 }
 
-.main {
+.layout > .main {
   grid-area: main;
   @apply px-3;
+  @apply overflow-y-auto;
 }
 
-.footer {
+.layout > .footer {
   grid-area: footer;
 }
