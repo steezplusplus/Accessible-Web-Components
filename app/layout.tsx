@@ -1,7 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
+import Link from 'next/link';
 
-const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +16,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={openSans.className}>
+        <nav className="border border-black px-2">
+          <ul className="flex items-center">
+            <li>
+              <Link className="text-lg" href="#">Steez++</Link>
+            </li>
+            <div className="ml-auto">
+              <li>
+                <Link className="text-blue-800 hover:text-blue-900 hover:underline" href="/about">About</Link>
+              </li>
+            </div>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
