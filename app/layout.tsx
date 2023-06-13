@@ -1,4 +1,4 @@
-import './globals.css'
+import '../styles/globals.css'
 import { Navbar } from '@/components/navbar/Navbar'
 import { Open_Sans } from 'next/font/google'
 
