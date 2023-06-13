@@ -1,5 +1,5 @@
 .layout {
-  display: grid;
+  @apply h-screen grid;
   grid-template:
     "navbar" 2.5rem
     "main" 1fr
