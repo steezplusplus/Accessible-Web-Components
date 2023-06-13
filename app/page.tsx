@@ -7,6 +7,13 @@ export default function Home() {
       <Article />
       <Article />
       <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
     </>
   );
 }
