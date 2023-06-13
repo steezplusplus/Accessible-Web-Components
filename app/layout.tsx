@@ -1,6 +1,6 @@
 import './globals.css'
+import { Navbar } from '@/components/navbar/Navbar'
 import { Open_Sans } from 'next/font/google'
-import Link from 'next/link';
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -17,18 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={openSans.className}>
-        <nav className="border border-black px-2">
-          <ul className="flex items-center">
-            <li>
-              <Link className="text-lg" href="/">Steez++</Link>
-            </li>
-            <div className="ml-auto">
-              <li>
-                <Link className="text-blue-800 hover:text-blue-900 hover:underline" href="/about">About</Link>
-              </li>
-            </div>
-          </ul>
-        </nav>
+        <Navbar />
         {children}
       </body>
     </html>
