@@ -1,9 +1,9 @@
 .layout {
-  @apply px-2;
   display: grid;
   grid-template:
     "navbar" 2rem
-    "main" 1fr;
+    "main" 1fr
+    "footer" 2rem;
 }
 
 .navbar {
@@ -12,4 +12,9 @@
 
 .main {
   grid-area: main;
+  @apply px-2;
+}
+
+.footer {
+  grid-area: footer;
 }

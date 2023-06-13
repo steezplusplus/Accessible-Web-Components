@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import styles from '../styles/layout.module.css';
 import { Navbar } from '@/components/navbar/Navbar';
+import { Footer } from '@/components/footer/Footer';
 import { Open_Sans } from 'next/font/google';
 
 const openSans = Open_Sans({ subsets: ['latin'] })
@@ -24,6 +25,9 @@ export default function RootLayout({
         <main className={styles.main}>
           {children}
         </main>
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
       </body>
     </html>
   )

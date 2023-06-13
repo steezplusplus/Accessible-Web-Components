@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Navbar() {
   return (
-    <ul className="flex items-center">
+    <ul className="flex items-center border border-solid h-full">
       <li>
         <Link className="text-lg" href="/">Steez++</Link>
       </li>
