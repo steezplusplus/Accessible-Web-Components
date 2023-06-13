@@ -19,13 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.className} ${styles.layout}`}>
-        <nav className={styles.navbar}>
+        <nav>
           <Navbar />
         </nav>
-        <main className={styles.main}>
+        <main>
           {children}
         </main>
-        <footer className={styles.footer}>
+        <footer>
           <Footer />
         </footer>
       </body>
