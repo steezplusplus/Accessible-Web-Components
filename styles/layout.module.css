@@ -3,7 +3,7 @@
   grid-template:
     "navbar" 2.5rem
     "main" 1fr
-    "footer" 2rem;
+    "footer" 1.5rem;
 }
 
 .layout > navbar {
