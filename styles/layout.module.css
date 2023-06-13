@@ -1,0 +1,14 @@
+.layout {
+  display: grid;
+  grid-template:
+    "navbar" 2rem
+    "main" 1fr;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.main {
+  grid-area: main;
+}
