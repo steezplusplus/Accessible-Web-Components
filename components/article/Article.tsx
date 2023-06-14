@@ -1,3 +1,4 @@
+import { Tag } from "@/components/tag/Tag";
 
 export function Article() {
   return (
@@ -6,13 +7,13 @@ export function Article() {
       <div>
         <ul className="flex gap-x-2">
           <li className="border border-solid rounded px-1">
-            <span className="text-sm">Tag 1</span>
+            <Tag displayText="Tag 1" />
           </li>
           <li className="border border-solid rounded px-1">
-            <span className="text-sm">Tag 2</span>
+            <Tag displayText="Tag 2" />
           </li>
           <li className="border border-solid rounded px-1">
-            <span className="text-sm">Tag 3</span>
+            <Tag displayText="Tag 3" />
           </li>
         </ul>
       </div>
