@@ -17,19 +17,8 @@ export default async function Home() {
     <>
     {blogPosts.data.map((blogPost: any, i: number) => {
       const { title } = blogPost;
-      return <p key={`${title}-${i}`}>{title}</p>
+      return <Article key={`${title}-${i}`} title={title} />
     })}
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
-      <Article />
     </>
   );
 }

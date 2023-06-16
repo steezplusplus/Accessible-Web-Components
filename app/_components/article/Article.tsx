@@ -1,9 +1,14 @@
 import { Tag } from "@/app/_components/tag/Tag";
 
-export function Article() {
+export type ArticleProps = {
+  title: string;
+}
+
+export function Article(props: ArticleProps) {
+  const { title }  = props;
   return (
     <article className="border border-solid px-1">
-      <h2 className="text-lg">Title</h2>
+      <h2 className="text-lg">{title}</h2>
       <div>
         <ul className="flex gap-x-2">
           <li className="border border-solid rounded px-1">
