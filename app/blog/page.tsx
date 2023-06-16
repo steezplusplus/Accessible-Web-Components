@@ -7,9 +7,9 @@ export default async function Blog() {
 
   return (
     <>
-    {blogPostsData.map((blogPost: any, i: number) => {
-      const { title } = blogPost;
-      return <Article key={`${title}-${i}`} title={title} />
+    {blogPostsData.map((blogPost, i: number) => {
+      const { title, tags, summary  } = blogPost;
+      return <Article key={`${title}-${i}`} title={title} tags={tags} summary={summary} />
     })}
     </>
   );

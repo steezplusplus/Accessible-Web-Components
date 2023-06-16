@@ -1,28 +1,29 @@
-import { Tag } from "@/app/_components/tag/Tag";
+import { Tag } from "../tag/Tag";
 
 export type ArticleProps = {
   title: string;
+  tags: {
+    name: string;
+    slug: string;
+  }[];
+  summary: string;
 }
 
 export function Article(props: ArticleProps) {
-  const { title }  = props;
+  const { title, tags, summary }  = props;
   return (
     <article className="border border-solid px-1">
       <h2 className="text-lg">{title}</h2>
       <div>
         <ul className="flex gap-x-2">
-          <li className="border border-solid rounded px-1">
-            <Tag displayText="Tag 1" />
-          </li>
-          <li className="border border-solid rounded px-1">
-            <Tag displayText="Tag 2" />
-          </li>
-          <li className="border border-solid rounded px-1">
-            <Tag displayText="Tag 3" />
-          </li>
+          {tags.map((tag, i) => {
+            return <li key={`${tag.name}-${i}`}>
+              <Tag displayText={tag.name} />
+            </li>
+          })}
         </ul>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id risus gravida, dictum lorem</p>
+      <p>{summary}</p>
     </article>
-  )
+  );
 }
