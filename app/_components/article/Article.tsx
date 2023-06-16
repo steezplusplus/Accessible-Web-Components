@@ -1,4 +1,4 @@
-import { Tag } from "@/components/tag/Tag";
+import { Tag } from "@/app/_components/tag/Tag";
 
 export function Article() {
   return (
