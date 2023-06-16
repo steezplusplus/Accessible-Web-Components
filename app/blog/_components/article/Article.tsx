@@ -17,6 +17,7 @@ export function Article(props: ArticleProps) {
       <div>
         <ul className="flex gap-x-2">
           {tags.map((tag, i) => {
+            
             return <li key={`${tag.name}-${i}`}>
               <Tag displayText={tag.name} />
             </li>
