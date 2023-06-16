@@ -12,7 +12,7 @@ export type ArticleProps = {
 export function Article(props: ArticleProps) {
   const { title, tags, summary }  = props;
   return (
-    <article className="border border-solid px-1">
+    <article className="border border-solid border-black rounded-sm p-1">
       <h2 className="text-lg">{title}</h2>
       <div>
         <ul className="flex gap-x-2">
