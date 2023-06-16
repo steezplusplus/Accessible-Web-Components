@@ -1,21 +1,13 @@
-import { Article } from "@/app/_components/article/Article";
-
-const BUTTERCMS_TOKEN = process.env.NEXT_PUBLIC_BUTTERCMS_TOKEN || '';
-
-async function getBlogPosts() {
-  const res = await fetch(`https://api.buttercms.com/v2/posts/?auth_token=${BUTTERCMS_TOKEN}`);
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  return res.json();
-}
+import { Article } from "./_components/article/Article";
+import { BlogPost, getBlogPosts } from "./_api/api";
 
 export default async function Blog() {
-  const blogPosts = await getBlogPosts();
+  const blogPosts: BlogPost = await getBlogPosts();
+  const { data: blogPostsData } = blogPosts;
 
   return (
     <>
-    {blogPosts.data.map((blogPost: any, i: number) => {
+    {blogPostsData.map((blogPost: any, i: number) => {
       const { title } = blogPost;
       return <Article key={`${title}-${i}`} title={title} />
     })}
