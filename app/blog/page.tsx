@@ -5,6 +5,9 @@ export default async function Blog() {
   const blogPosts: BlogPost = await getBlogPosts();
   const { data: blogPostsData } = blogPosts;
 
+  const tagNames = blogPostsData.map((blogPost) => blogPost.tags.map((tag) => tag.name)).flat();
+  const uniqueTagNames = [...new Set(tagNames)];
+
   return (
     <div className="flex flex-col gap-y-2">
       <section className="container m-auto">
@@ -13,24 +16,20 @@ export default async function Blog() {
       </section>
 
       <section className="container m-auto">
-        <p className="text-lg">Search blog by tags</p>
-        <div className="flex gap-x-8">
-          <label>
-            <span className="mr-1">Tag 1</span>
-            <input type="checkbox" />
-          </label>
-          <label>
-            <span className="mr-1">Tag 2</span>
-            <input type="checkbox" />
-          </label>
-          <label>
-            <span className="mr-1">Tag 3</span>
-            <input type="checkbox" />
-          </label>
-        </div>
+        <fieldset className="flex gap-x-8">
+          <legend>Search by tags:</legend>
+          {uniqueTagNames.map((tagName, i) => {
+              return (
+                <label>
+                  <span className="mr-1">{tagName}</span>
+                  <input type="checkbox" />
+                </label>
+              );
+            })}
+        </fieldset>
       </section>
 
-      <section className="container m-auto grid grid-cols-3 gap-2">
+      <section className="container m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2">
         {blogPostsData.map((blogPost, i: number) => {
           const { title, tags, summary  } = blogPost;
           return <Article key={`${title}-${i}`} title={title} tags={tags} summary={summary} />
