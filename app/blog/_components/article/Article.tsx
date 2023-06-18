@@ -3,6 +3,7 @@ import { Tag } from "../tag/Tag";
 
 export type ArticleProps = {
   title: string;
+  slug: string;
   tags: {
     name: string;
     slug: string;
@@ -11,10 +12,11 @@ export type ArticleProps = {
 }
 
 export function Article(props: ArticleProps) {
-  const { title, tags, summary }  = props;
+  const { title, slug, tags, summary }  = props;
+  console.log(slug);
   return (
     <article className="border border-solid border-black rounded-sm p-1">
-      <Link className="text-xl text-blue-800 hover:text-blue-900 hover:underline" href="#">{title}</Link>
+      <Link className="text-xl text-blue-800 hover:text-blue-900 hover:underline" href={`/blog/${slug}`}>{title}</Link>
       <div>
         <ul className="flex gap-x-2">
           {tags.map((tag, i) => {
