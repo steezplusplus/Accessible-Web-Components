@@ -1,13 +1,13 @@
 import { BlogPost, getBlogPosts } from "../_api/api";
 
-export type BlogPostParams = { 
-  params: { slug: string } 
+export type BlogPostParams = {
+  params: { slug: string }
 };
 
-export default async function BlogPost({ params }: BlogPostParams ) {
+export default async function BlogPostPage({ params }: BlogPostParams) {
   const blogPosts: BlogPost = await getBlogPosts();
   const { data: blogPostsData } = blogPosts;
-  const blogPost = blogPostsData.find((blogPosts) => blogPosts.slug === params.slug );
+  const blogPost = blogPostsData.find((blogPosts) => blogPosts.slug === params.slug);
 
   if (!blogPost) {
     return (

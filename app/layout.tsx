@@ -1,3 +1,4 @@
+import React from 'react';
 import './_styles/globals.css';
 import styles from './_styles/layout.module.css';
 import { Navbar } from '@/app/_components/navbar/Navbar';
