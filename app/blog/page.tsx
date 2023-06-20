@@ -19,19 +19,19 @@ export default async function Blog() {
         <fieldset className="flex gap-x-8">
           <legend>Search by tags:</legend>
           {uniqueTagNames.map((tagName, i) => {
-              return (
-                <label>
-                  <span className="mr-1">{tagName}</span>
-                  <input type="checkbox" />
-                </label>
-              );
-            })}
+            return (
+              <label key={`${tagName}-${i}`}>
+                <span className="mr-1">{tagName}</span>
+                <input type="checkbox" />
+              </label>
+            );
+          })}
         </fieldset>
       </section>
 
       <section className="container m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2">
         {blogPostsData.map((blogPost, i: number) => {
-          const { title, tags, summary, slug  } = blogPost;
+          const { title, tags, summary, slug } = blogPost;
           return <Article key={`${title}-${i}`} title={title} slug={slug} tags={tags} summary={summary} />
         })}
       </section>
