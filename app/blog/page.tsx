@@ -32,7 +32,7 @@ export default async function Blog() {
       <section className="container m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2">
         {blogPostsData.map((blogPost, i: number) => {
           const { title, tags, summary, slug } = blogPost;
-          return <Article key={`${title}-${i}`} title={title} slug={slug} tags={tags} summary={summary} />
+          return <Article key={`${title}-${i}`} title={title} slug={slug} tags={tags} summary={summary} />;
         })}
       </section>
     </div>

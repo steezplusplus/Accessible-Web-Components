@@ -18,5 +18,5 @@ export function Footer() {
         <p>amet</p>
       </li>
     </ul>
-  )
+  );
 }

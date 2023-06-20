@@ -12,7 +12,7 @@ export type ArticleProps = {
 }
 
 export function Article(props: ArticleProps) {
-  const { title, slug, tags, summary }  = props;
+  const { title, slug, tags, summary } = props;
   console.log(slug);
   return (
     <article className="border border-solid border-black rounded-sm p-1">
@@ -22,11 +22,11 @@ export function Article(props: ArticleProps) {
           {tags.map((tag, i) => {
             return <li key={`${tag.name}-${i}`}>
               <Tag displayText={tag.name} />
-            </li>
+            </li>;
           })}
         </ul>
       </div>
       <p>{summary}</p>
     </article>
-  )
+  );
 }
