@@ -29,7 +29,7 @@ export default async function Blog() {
         </fieldset>
       </section>
 
-      <section className="container m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-2">
+      <section className="container m-auto grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {blogPostsData.map((blogPost, i: number) => {
           const { title, tags, summary, slug } = blogPost;
           return <Article key={`${title}-${i}`} title={title} slug={slug} tags={tags} summary={summary} />;

@@ -4,7 +4,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-y-4">
       <header className="mx-auto grid h-auto max-w-7xl grid-cols-4 gap-x-4 border border-dotted border-red-500 pt-12 md:grid-cols-8 lg:min-h-[40rem] lg:grid-cols-12 lg:gap-x-6 lg:pb-12">
-        <div className="lg:-mr-5vw col-span-full mb-12 flex items-center justify-center border border-solid lg:col-span-7 lg:col-start-6 lg:-mt-12 lg:mb-0 lg:px-0">
+        <div className="col-span-full mb-12 flex items-center justify-center border border-solid lg:col-span-7 lg:col-start-6 lg:-mt-12 lg:mb-0 lg:px-0">
           Asset
         </div>
         <div className="col-span-full flex flex-col border border-solid pt-6 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:h-full">
