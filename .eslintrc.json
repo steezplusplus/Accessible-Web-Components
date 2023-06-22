@@ -1,6 +1,7 @@
 {
   "extends": [
     "eslint:recommended",
+    "plugin:tailwindcss/recommended",
     "next/core-web-vitals"
   ],
   "rules": {
