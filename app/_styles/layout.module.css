@@ -12,7 +12,6 @@
 
 .layout > main {
   grid-area: main;
-  @apply p-3;
   @apply overflow-y-auto;
 }
 

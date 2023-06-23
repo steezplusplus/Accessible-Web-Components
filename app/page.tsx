@@ -3,16 +3,16 @@ import Link from "next/link";
 export default async function Home() {
   return (
     <div>
-      <header>
-        <ul>
+      <header className="bg-gradient-to-r from-emerald-500 to-emerald-900">
+        <ul className="p-8">
           <li>
-            <h2 className="text-4xl">Helping people make the web a better place through accessible software.</h2>
+            <h2 className="text-7xl text-white">Helping people make the web a better place through accessible software.</h2>
           </li>
           <li>
-            <Link className="text-xl text-blue-800 hover:text-blue-900 hover:underline" href="/blog">Read the blog</Link>
+            <Link className="text-xl text-white hover:underline" href="/blog">Read the blog</Link>
           </li>
           <li>
-            <Link className="text-xl text-blue-800 hover:text-blue-900 hover:underline" href="/about">Learn about me</Link>
+            <Link className="text-xl text-white hover:underline" href="/about">Learn about me</Link>
           </li>
         </ul>
       </header>
