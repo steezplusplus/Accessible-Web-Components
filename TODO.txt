@@ -8,3 +8,4 @@ loading, error
 navigation links in navbar should have active state styling
 Favicon
 Infinite loading or pagination for blog posts?
+colocate components
