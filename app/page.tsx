@@ -22,23 +22,29 @@ export default async function Home() {
           <h3 className="text-xl font-bold tracking-widest">How I&apos;m here to help you</h3>
         </div>
 
-        <ul className="grid grid-cols-3">
-          <li>
+        <ul className="grid gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
             Audit & Optimize
           </li>
-          <li>
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
             Build on your foundation
           </li>
-          <li>
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
             Achieve WCAG 2.1 Compliance
           </li>
-          <li>
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
             Simplify SDLC with automation
           </li>
-          <li>
-            Deliver accessability by default throughout your organization
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
+            Deliver accessability by default
           </li>
-          <li>
+          <li className="flex flex-col items-center justify-center">
+            <div className="mb-2 h-24 w-24 bg-emerald-500" />
             Focus on beautiful UI
           </li>
         </ul>
