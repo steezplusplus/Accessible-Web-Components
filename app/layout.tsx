@@ -8,7 +8,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 export const metadata = {
-  title: 'Steez++',
+  title: 'Steez++ | Home',
   description: 'Steezy',
 };
 

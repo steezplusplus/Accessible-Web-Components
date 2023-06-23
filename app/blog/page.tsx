@@ -2,6 +2,11 @@ import { Pagination } from "./_components/pagination/Pagination";
 import { Article } from "./_components/article/Article";
 import { Header } from "./_components/header/Header";
 
+export const metadata = {
+  title: 'Steez++ | Blog',
+  description: 'Steezy',
+};
+
 export default async function Blog() {
   const placeholderDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
   return (
