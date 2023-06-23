@@ -6,3 +6,4 @@ Where to host blog posts
 featured article component
 footer
 loading, error
+navigation links in navbar should have active state styling
