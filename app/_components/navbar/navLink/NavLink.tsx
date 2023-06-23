@@ -15,7 +15,7 @@ export function NavLink(props: NavLinkProps) {
   return (
     <Link className="group text-black transition duration-300" href={href} aria-current={ariaCurrent}>
       {name}
-      <span className="block h-0.5 max-w-0 bg-black transition-all duration-700 group-hover:max-w-full group-aria-[current=page]:max-w-full" />
+      <span className="block h-0.5 max-w-0 bg-black transition-all duration-700 group-aria-[current=page]:max-w-full" />
     </Link>
   );
 }
