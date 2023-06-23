@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-// TODO A11y: https://www.a11ymatters.com/pattern/pagination/
+// TODO If I use pagination: https://www.a11ymatters.com/pattern/pagination/
+// TODO If i use infinite scroll: https://www.w3.org/WAI/ARIA/apg/patterns/feed/
 export function Pagination() {
   return (
     <nav className="mt-6" role="navigation" aria-label="Pagination Navigation">
