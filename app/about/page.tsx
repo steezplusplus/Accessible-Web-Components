@@ -1,15 +1,9 @@
+import { Header } from "./_components/header/Header";
+
 export default function About() {
   return (
-    <div>
-      <header className="bg-gradient-to-r from-blue-800 to-indigo-900">
-        <div className="flex flex-col gap-y-2 p-8">
-          <h2 className="text-7xl leading-tight text-white">
-            About the project
-          </h2>
-          <p className="text-white">In question-answer format</p>
-        </div>
-      </header>
-
+    <>
+      <Header />
       <section className="mx-auto mt-6 max-w-2xl px-4 pt-6">
         <h2 className="text-4xl">What is Steez++?</h2>
         <p className="mt-4 text-lg">A blog trying to make web accessability become more accessible knowledge</p>
@@ -39,6 +33,6 @@ export default function About() {
           <li>Twitter</li>
         </ul>
       </section >
-    </div >
+    </>
   );
 }
