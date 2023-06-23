@@ -10,7 +10,7 @@ export default async function Home() {
           </li>
           <li>
             <ul className="flex flex-row items-center gap-x-8">
-              <ArrowLink href="/about" title="More About Me" />
+              <ArrowLink href="/about" title="About the project" />
               <ArrowLink href="/blog" title="Read the blog" />
             </ul>
           </li>
