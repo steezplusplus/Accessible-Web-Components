@@ -6,7 +6,7 @@ export default async function Home() {
       <header className="bg-gradient-to-r from-emerald-500 to-emerald-900">
         <ul className="p-8">
           <li>
-            <h2 className="text-7xl text-white">Helping people make the web a better place through accessible software.</h2>
+            <h2 className="text-7xl text-white">Making the web a better place through accessible software.</h2>
           </li>
           <li>
             <Link className="text-xl text-white hover:underline" href="/blog">Read the blog</Link>
