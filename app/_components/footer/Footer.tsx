@@ -1,7 +1,8 @@
-
+// TODO Add links to linkedin, github. 
+// TODO Add button that scrolls to top.
 export function Footer() {
   return (
-    <ul className="flex items-center justify-between border border-solid h-full text-xs px-1">
+    <ul className="flex h-full items-center justify-between border border-solid px-1 text-xs">
       <li>
         <p>Lorem</p>
       </li>
