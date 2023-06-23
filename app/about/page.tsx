@@ -4,7 +4,7 @@ export default function About() {
       <header className="bg-gradient-to-r from-blue-800 to-indigo-900">
         <ul className="flex flex-col gap-y-8 p-8">
           <li>
-            <h1 className="text-7xl text-white">
+            <h1 className="text-7xl leading-tight text-white">
               Hi, I&apos;m Jesse.
               <br />
               I&apos;m a software engineer
