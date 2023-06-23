@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Navbar() {
   return (
-    <ul className="flex items-center border border-solid h-full px-1">
+    <ul className="flex h-full items-center border border-solid px-1">
       <li>
         <Link href="/">
           <h1 className="text-2xl hover:underline">Steez++</h1>
