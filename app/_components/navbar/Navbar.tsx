@@ -1,3 +1,4 @@
+import { NavLink } from './navLink/NavLink';
 import Link from 'next/link';
 
 export function Navbar() {
@@ -13,16 +14,10 @@ export function Navbar() {
       </li>
       <ul className="ml-auto flex items-center gap-x-6">
         <li>
-          <Link className="group text-black transition duration-300" href="/about">
-            About
-            <span className="block h-0.5 max-w-0 bg-black transition-all duration-700 group-hover:max-w-full" />
-          </Link>
+          <NavLink href="/about" title="About" />
         </li>
         <li>
-          <Link className="group text-black transition duration-300" href="/blog">
-            Blog
-            <span className="block h-0.5 max-w-0 bg-black transition-all duration-700 group-hover:max-w-full" />
-          </Link>
+          <NavLink href="/blog" title="Blog" />
         </li>
       </ul>
     </ul>
