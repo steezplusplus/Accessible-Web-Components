@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 
 export type ArticleProps = {
   title: string;
@@ -15,14 +17,19 @@ export function Article(props: ArticleProps) {
           <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
         </Link>
       </header>
+
       <section className="px-2 py-1">
-        <p className="mb-3 font-light text-gray-700">{description}</p>
+        <p className="font-light">{description}</p>
       </section>
+
       <footer className="px-2 py-1">
-        <Link className="rounded-lg border px-3 text-center text-sm font-medium" href={`/blog/${slug}`}>
-          Read more
+        <Link className="text-xlhover:underline group" href={`blog/${slug}`}>
+          <span className="flex items-center gap-x-2">
+            <i className="italic">Read more</i>
+            <FontAwesomeIcon className="group-hover:translate-x-1 group-focus:translate-x-1" icon={faArrowAltCircleRight} color="black" size="sm" />
+          </span>
         </Link>
       </footer>
-    </article>
+    </article >
   );
 }
