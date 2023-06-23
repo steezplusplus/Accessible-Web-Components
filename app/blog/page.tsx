@@ -11,7 +11,7 @@ export default async function Blog() {
   return (
     <div>
       <header className="bg-gradient-to-r from-amber-500 to-pink-500">
-        <ul className="p-8">
+        <ul className="flex flex-col gap-y-8 p-8">
           <li>
             <h1 className="text-7xl text-white">Learn development with these articles</h1>
           </li>
