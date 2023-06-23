@@ -1,0 +1,7 @@
+FontAwesome icons
+Dark mode
+3D animations
+Where to host blog posts
+'use client' to make client components
+featured article component
+footer
