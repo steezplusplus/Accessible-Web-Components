@@ -5,3 +5,4 @@ Where to host blog posts
 'use client' to make client components
 featured article component
 footer
+loading, error
