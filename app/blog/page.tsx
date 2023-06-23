@@ -9,11 +9,17 @@ export default async function Blog() {
   const uniqueTagNames = [...new Set(tagNames)];
 
   return (
-    <div className="flex flex-col gap-y-2">
-      <section className="container m-auto">
-        <h1 className="text-4xl">Learn development with these articles.</h1>
-        <h2 className="text-2xl">Here you will find my latest writing.</h2>
-      </section>
+    <div>
+      <header className="bg-gradient-to-r from-amber-500 to-pink-500">
+        <ul className="p-8">
+          <li>
+            <h1 className="text-7xl text-white">Learn development with these articles</h1>
+          </li>
+          <li>
+            <h2 className="text-2xl text-white">Some other bullshit...</h2>
+          </li>
+        </ul>
+      </header>
 
       <section className="container m-auto">
         <fieldset className="flex gap-x-8">
