@@ -6,15 +6,15 @@ export default async function Blog() {
     <>
       <Header />
       <section className="grid gap-10 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <Article gradient={0} />
-        <Article gradient={1} />
-        <Article gradient={2} />
-        <Article gradient={3} />
-        <Article gradient={4} />
-        <Article gradient={5} />
-        <Article gradient={6} />
-        <Article gradient={7} />
-        <Article gradient={8} />
+        <Article title="title" description="description" slug="0" />
+        <Article title="title" description="description" slug="1" />
+        <Article title="title" description="description" slug="2" />
+        <Article title="title" description="description" slug="3" />
+        <Article title="title" description="description" slug="4" />
+        <Article title="title" description="description" slug="5" />
+        <Article title="title" description="description" slug="6" />
+        <Article title="title" description="description" slug="7" />
+        <Article title="title" description="description" slug="8" />
       </section>
     </>
   );
