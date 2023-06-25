@@ -1,18 +1,12 @@
 const rehypePrettyCode = require('rehype-pretty-code');
 
 /** @type {import('rehype-pretty-code').Options} */
-const options = {
-  // See Options section below.
-};
+const rehypeOptions = {};
 
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
-    // If you use remark-gfm, you'll need to use next.config.mjs
-    // as the package is ESM only
-    // https://github.com/remarkjs/remark-gfm#install
-    remarkPlugins: [],
-    rehypePlugins: [[rehypePrettyCode, options]],
+    rehypePlugins: [[rehypePrettyCode, rehypeOptions]],
   },
 });
  
