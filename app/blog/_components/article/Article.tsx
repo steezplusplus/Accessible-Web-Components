@@ -11,8 +11,8 @@ export type ArticleProps = {
 export function Article(props: ArticleProps) {
   const { title, description, slug } = props;
   return (
-    <article className="rounded-[0.75rem] border p-1">
-      <header className="rounded-lg px-2 py-1">
+    <article className="rounded-[0.75rem] border p-2">
+      <header>
         <Link
           className="text-2xl font-bold tracking-tight text-blue-900 hover:underline"
           href={`/blog/${slug}`}
@@ -20,7 +20,7 @@ export function Article(props: ArticleProps) {
           {title}
         </Link>
       </header>
-      <p className="border-t p-2 font-light">{description}</p>
+      <p className="border-t font-light">{description}</p>
     </article >
   );
 }
