@@ -12,5 +12,5 @@
 
 :root {
   font-size: 1rem;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans'; /* TODO Does this belong in @layer base? */
 }
