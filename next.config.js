@@ -1,3 +1,10 @@
+const rehypePrettyCode = require('rehype-pretty-code');
+
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+  // See Options section below.
+};
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -5,7 +12,7 @@ const withMDX = require('@next/mdx')({
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [],
-    rehypePlugins: [],
+    rehypePlugins: [[rehypePrettyCode, options]],
   },
 });
  

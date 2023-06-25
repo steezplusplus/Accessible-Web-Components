@@ -10,7 +10,10 @@
 * Is it a mistake to make components be client components by default if they neither fetch data or use hooks or onclick?
 * use preferred-reduced-motion for my animations
 * Add line length rules to eslint
+* confugre nested css
 
 
 ## EXTENDED GOALS:
 * Host blog posts
+* https://github.com/remarkjs/remark-toc
+* https://github.com/rehypejs/rehype-autolink-headings
