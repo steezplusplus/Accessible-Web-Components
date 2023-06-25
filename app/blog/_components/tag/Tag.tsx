@@ -6,6 +6,6 @@ export type TagProps = {
 export function Tag(props: TagProps) {
   const { displayText } = props;
   return (
-    <span className="text-sm border border-solid rounded-md px-1">{displayText}</span>
+    <span className="rounded-md border border-solid px-1 text-sm">{displayText}</span>
   );
 }
