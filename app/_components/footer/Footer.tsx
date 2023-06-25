@@ -7,7 +7,7 @@ const GithubURL = new URL('https://github.com/steezplusplus');
 
 export function Footer() {
   return (
-    <div className="flex h-full bg-gradient-to-r from-emerald-500 to-emerald-900">
+    <div className="flex h-full bg-gradient-to-r from-emerald-900 to-emerald-500">
       <ul className="flex h-full flex-col p-1 text-xs text-white">
         <li>
           <p>

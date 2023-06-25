@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <header className="bg-gradient-to-r from-amber-500 to-pink-500">
+    <header className="bg-gradient-to-r from-emerald-900 to-emerald-500">
       <ul className="flex flex-col gap-y-2 p-8">
         <li>
           <h1 className="text-7xl leading-tight text-white">Blog</h1>
