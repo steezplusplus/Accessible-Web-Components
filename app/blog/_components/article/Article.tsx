@@ -11,7 +11,7 @@ export type ArticleProps = {
 export function Article(props: ArticleProps) {
   const { title, description, slug } = props;
   return (
-    <article className="rounded-[0.75rem] border p-2">
+    <article className="rounded-md border p-2">
       <header>
         <Link
           className="text-2xl font-bold tracking-tight text-blue-900 hover:underline"
