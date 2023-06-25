@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const LinkedInURL = new URL('https://www.linkedin.com/in/jesse-bp/');
-const GithubURL = new URL('https://github.com/steezplusplus');
+const LinkedInURL = 'https://www.linkedin.com/in/jesse-bp/';
+const GithubURL = 'https://github.com/steezplusplus';
 
 export function Footer() {
   return (
