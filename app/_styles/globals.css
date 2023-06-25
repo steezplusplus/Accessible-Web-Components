@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../../assets/fonts/OpenSans-Variable.ttf') format('truetype-variations');
+@layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../assets/fonts/OpenSans-Variable.ttf') format('truetype-variations');
+  }
+
+  /* For remark, because code blocks must be a grid */
+  pre > code {
+    display: grid;
+  }
 }
 
 :root {
