@@ -1,8 +1,0 @@
-Favicon
-'use client' to make client components
-Where to host blog posts
-
-All <Header> components are the same
-
-test with NVDA and VoiceOver!
-https://nextjs.org/docs/architecture/accessibility
