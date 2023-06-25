@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 // TODO If I use pagination: https://www.a11ymatters.com/pattern/pagination/

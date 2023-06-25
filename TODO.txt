@@ -1,10 +1,8 @@
-Dark mode
-3D animations
-Where to host blog posts
-featured article component
-loading, error
 Favicon
-Infinite loading or pagination for blog posts?
-
-colocate components
 'use client' to make client components
+Where to host blog posts
+
+All <Header> components are the same
+
+test with NVDA and VoiceOver!
+https://nextjs.org/docs/architecture/accessibility

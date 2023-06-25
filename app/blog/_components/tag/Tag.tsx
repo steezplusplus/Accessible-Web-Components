@@ -1,3 +1,4 @@
+'use client';
 
 export type TagProps = {
   displayText: string;

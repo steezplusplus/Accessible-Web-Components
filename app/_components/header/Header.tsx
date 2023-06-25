@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowLink } from "../arrowLink/ArrowLink";
 
 export function Header() {
