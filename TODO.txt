@@ -1,10 +1,10 @@
 Dark mode
 3D animations
 Where to host blog posts
-'use client' to make client components
 featured article component
-footer
 loading, error
 Favicon
 Infinite loading or pagination for blog posts?
+
 colocate components
+'use client' to make client components
