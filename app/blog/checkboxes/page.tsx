@@ -1,7 +1,26 @@
 "use client";
 
-import Example from './example.mdx';
+import Checkbox from './checkbox.mdx';
 
 export default function Page() {
-  return <Example />;
+  return (
+    <>
+      <h1>Checkbox</h1>
+      <Checkbox />
+      <fieldset>
+        <label>
+          1
+          <input type="checkbox" name="name" />
+        </label>
+        <label>
+          2
+          <input type="checkbox" name="name" />
+        </label>
+        <label>
+          3
+          <input type="checkbox" name="name" />
+        </label>
+      </fieldset>
+    </>
+  );
 }
