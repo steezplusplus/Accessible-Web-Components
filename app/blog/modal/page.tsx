@@ -1,7 +1,12 @@
 "use client";
 
-import Example from './example.mdx';
+import Modal from './modal.mdx';
 
 export default function Page() {
-  return <Example />;
+  return (
+    <>
+      <h1>Modal</h1>
+      <Modal />
+    </>
+  );
 }
