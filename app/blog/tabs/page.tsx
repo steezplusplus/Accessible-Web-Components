@@ -1,7 +1,12 @@
 "use client";
 
-import Example from './example.mdx';
+import Tabs from './tabs.mdx';
 
 export default function Page() {
-  return <Example />;
+  return (
+    <>
+      <h1>Tabs</h1>
+      <Tabs />
+    </>
+  );
 }
