@@ -1,7 +1,12 @@
 "use client";
 
-import Example from './example.mdx';
+import Alert from './alert.mdx';
 
-export default function Page() {
-  return <Example />;
+export default function AlertPage() {
+  return (
+    <>
+      <h1>Alert</h1>
+      <Alert />
+    </>
+  );
 }
