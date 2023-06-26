@@ -4,7 +4,7 @@ import Checkbox from './checkbox.mdx';
 
 export default function Page() {
   return (
-    <>
+    <article className="prose mx-auto md:prose-lg lg:prose-xl">
       <h1>Checkbox</h1>
       <Checkbox />
       <fieldset>
@@ -21,6 +21,6 @@ export default function Page() {
           <input type="checkbox" name="name" />
         </label>
       </fieldset>
-    </>
+    </article>
   );
 }
