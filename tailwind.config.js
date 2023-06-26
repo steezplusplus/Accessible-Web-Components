@@ -3,5 +3,7 @@ module.exports = {
   content: [
     "./app/**/*.{ts,tsx}",
   ],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
