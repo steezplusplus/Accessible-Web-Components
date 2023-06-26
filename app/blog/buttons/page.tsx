@@ -1,7 +1,12 @@
 "use client";
 
-import Example from './example.mdx';
+import Button from './button.mdx';
 
 export default function Page() {
-  return <Example />;
+  return (
+    <>
+      <h1>Button</h1>
+      <Button />
+    </>
+  );
 }
