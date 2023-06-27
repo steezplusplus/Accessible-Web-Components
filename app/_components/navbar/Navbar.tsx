@@ -1,5 +1,3 @@
-'use client';
-
 import { NavLink } from './navLink/NavLink';
 
 export function Navbar() {

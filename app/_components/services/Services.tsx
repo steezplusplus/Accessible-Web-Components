@@ -1,5 +1,3 @@
-'use client';
-
 // TODO Component composition
 export function Services() {
   return (

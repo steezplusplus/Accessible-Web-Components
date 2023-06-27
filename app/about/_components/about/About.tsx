@@ -1,5 +1,3 @@
-'use client';
-
 export function About() {
   return (
     <section className="mx-auto max-w-2xl px-4 pt-6">

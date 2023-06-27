@@ -1,5 +1,3 @@
-'use client';
-
 export function Header() {
   return (
     <header className="bg-gradient-to-r from-emerald-900 to-emerald-500">
