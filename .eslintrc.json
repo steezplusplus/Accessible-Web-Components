@@ -16,6 +16,12 @@
     "jsx-quotes": [
       "error",
       "prefer-double"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 80
+      }
     ]
   }
 }
