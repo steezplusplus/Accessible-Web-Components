@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ export type NavLinkProps = {
 export function NavLink(props: NavLinkProps) {
   const { href, name } = props;
   const pathname = usePathname();
-  const ariaCurrent = href === pathname ? "page" : undefined;
+  const ariaCurrent = href === pathname ? 'page' : undefined;
 
   return (
     <Link className="group text-black transition duration-300" href={href} aria-current={ariaCurrent}>
