@@ -8,9 +8,10 @@ export type TabsProps = {
   }[];
 }
 
+// TODO Have to use a ref to focus
 export function Tabs(props: TabsProps) {
   const { title, tabs } = props;
-  const [selectedTab, setSelectedTab] = useState<string>('#section-0');
+  const [selectedTab, setSelectedTab] = useState<string>('#section-0'); // TODO can maybe use active element?
 
   // TODO Can I move the onlick to the anchor?
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -21,11 +22,49 @@ export function Tabs(props: TabsProps) {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    switch (e.key) {
+      case 'ArrowLeft':
+        moveLeft(e);
+        break;
+      case 'ArrowRight':
+        moveRight();
+        break;
+      case 'Home':
+        e.preventDefault();
+        // TODO select first tab
+        break;
+      case 'End':
+        e.preventDefault();
+        // TODO select last tab
+        break;
+    }
+  };
+
+  const moveLeft = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const selectedTabIndex = +selectedTab.charAt(selectedTab.length - 1);
+    if (selectedTabIndex === 0) {
+      setSelectedTab(`#section-${tabs.length - 1}`);
+    } else {
+      setSelectedTab(`#section-${selectedTabIndex - 1}`);
+    }
+    // Should focus?
+  };
+
+  const moveRight = () => {
+    const selectedTabIndex = +selectedTab.charAt(selectedTab.length - 1);
+    if (selectedTabIndex === tabs.length - 1) {
+      setSelectedTab('#section-0');
+    } else {
+      setSelectedTab(`#section-${selectedTabIndex + 1}`);
+    }
+  };
+
   return (
     <div>
       <h2 id="tabs-title">{title}</h2>
 
-      <div onClick={handleClick}>
+      <div onClick={handleClick} onKeyDown={handleKeyDown}>
         <ul className="relative" aria-labelledby="tabs-title" role="tablist">
           {tabs.map((tab, i) => {
             const { title, content } = tab;
@@ -33,10 +72,10 @@ export function Tabs(props: TabsProps) {
             return (
               <li key={`tab-${i}`} role="presentation">
                 <a
-                  className="peer"
+                  className="peer focus:text-violet-400 aria-selected:underline"
                   id={`tab-${i}`}
                   href={`#section-${i}`}
-                  tabIndex={isSelected ? undefined : -1}
+                  tabIndex={isSelected ? 0 : -1}
                   aria-selected={isSelected}
                   role="tab"
                 >
