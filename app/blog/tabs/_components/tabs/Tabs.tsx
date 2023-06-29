@@ -26,42 +26,36 @@ export function Tabs(props: TabsProps) {
       <h2 id="tabs-title">{title}</h2>
 
       <div onClick={handleClick}>
-        <ul aria-labelledby="tabs-title" role="tablist">
+        <ul className="relative" aria-labelledby="tabs-title" role="tablist">
           {tabs.map((tab, i) => {
+            const { title, content } = tab;
             const isSelected = selectedTab === `#section-${i}`;
             return (
               <li key={`tab-${i}`} role="presentation">
                 <a
+                  className="peer"
                   id={`tab-${i}`}
                   href={`#section-${i}`}
                   tabIndex={isSelected ? undefined : -1}
                   aria-selected={isSelected}
                   role="tab"
                 >
-                  {tab.title}
+                  {title}
                 </a>
+                <section
+                  key={`section-${i}`}
+                  id={`section-${i}`}
+                  className="absolute -bottom-6 left-0 peer-aria-[selected=false]:hidden"
+                  aria-labelledby={`tab-${i}`}
+                  role="tabpanel"
+                  tabIndex={0}
+                >
+                  {content}
+                </section>
               </li>
             );
           })}
         </ul>
-
-        <div>
-          {tabs.map((tab, i) => {
-            const isSelected = selectedTab === `#section-${i}`;
-            return (
-              <section
-                key={`section-${i}`}
-                id={`section-${i}`}
-                className={isSelected ? '' : 'hidden'}
-                aria-labelledby={`tab-${i}`}
-                role="tabpanel"
-                tabIndex={0}
-              >
-                {tab.content}
-              </section>
-            );
-          })}
-        </div>
       </div>
     </div>
   );
