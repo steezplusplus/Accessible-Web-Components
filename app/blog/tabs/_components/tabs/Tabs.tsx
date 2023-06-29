@@ -10,13 +10,14 @@ export type TabsProps = {
 
 export function Tabs(props: TabsProps) {
   const { title, tabs } = props;
-  const [activeTab, setActiveTab] = useState<string>('#section-0');
+  const [selectedTab, setSelectedTab] = useState<string>('#section-0');
 
+  // TODO Can I move the onlick to the anchor?
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target instanceof HTMLAnchorElement) {
       e.preventDefault();
-      const activeTabId = e.target.getAttribute('href') as string;
-      setActiveTab(activeTabId);
+      const clickedTabId = e.target.getAttribute('href') as string;
+      setSelectedTab(clickedTabId);
     }
   };
 
@@ -25,12 +26,20 @@ export function Tabs(props: TabsProps) {
       <h2 id="tabs-title">{title}</h2>
 
       <div onClick={handleClick}>
-        <ul aria-labelledby="tabs-title">
+        <ul aria-labelledby="tabs-title" role="tablist">
           {tabs.map((tab, i) => {
-            const { title } = tab;
+            const isSelected = selectedTab === `#section-${i}`;
             return (
-              <li key={`tab-${i}`}>
-                <a id={`tab-${i}`} href={`#section-${i}`}>{title}</a>
+              <li key={`tab-${i}`} role="presentation">
+                <a
+                  id={`tab-${i}`}
+                  href={`#section-${i}`}
+                  tabIndex={isSelected ? undefined : -1}
+                  aria-selected={isSelected}
+                  role="tab"
+                >
+                  {tab.title}
+                </a>
               </li>
             );
           })}
@@ -38,15 +47,17 @@ export function Tabs(props: TabsProps) {
 
         <div>
           {tabs.map((tab, i) => {
-            const { content } = tab;
+            const isSelected = selectedTab === `#section-${i}`;
             return (
               <section
-                className={`${activeTab === `#section-${i}` ? '' : 'hidden'}`}
                 key={`section-${i}`}
                 id={`section-${i}`}
+                className={isSelected ? '' : 'hidden'}
                 aria-labelledby={`tab-${i}`}
+                role="tabpanel"
+                tabIndex={0}
               >
-                {content}
+                {tab.content}
               </section>
             );
           })}
