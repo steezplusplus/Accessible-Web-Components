@@ -64,7 +64,13 @@ export default function Page() {
 
         <h2>Now lets refactor with some JSX</h2>
         <Part2 />
-        <p>Now we have to use styling to show & hide content. Lets do this properly with `hidden`.</p>
+        <p>
+          Now we have to add interactivity to expose the correct tab panel.
+          That can be done with `hidden`, which will remove it from the accessability tree.
+          We also want to prevent the event from clicking on the anchor from bubbling outside the component.
+          Within the component, we want to use the anchor to leverage it default accessability,
+          while not effecting the URL.
+        </p>
       </article>
 
       <Tabs {...props} />
