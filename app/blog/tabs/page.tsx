@@ -39,7 +39,7 @@ function Tabs(props: TabsProps) {
   const { tabId, tabs } = props;
   return (
     <ul>
-      {
+      {/* {
         tabs.map((tab, i) => {
           const { name, section } = tab;
           return (
@@ -51,7 +51,7 @@ function Tabs(props: TabsProps) {
             </li>
           );
         })
-      }
+      } */}
     </ul>
   );
 }
