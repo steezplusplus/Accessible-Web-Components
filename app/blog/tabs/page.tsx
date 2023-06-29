@@ -5,8 +5,8 @@ import { Tabs, TabsProps } from './_components/tabs/Tabs';
 import Part1 from './part1.mdx';
 import Part2 from './part2.mdx';
 
-const part2props: TabsProps = {
-  title: 'Check this out!',
+const props: TabsProps = {
+  title: 'Tabs Title',
   tabs: [
     {
       title: 'Tab 1',
@@ -35,13 +35,39 @@ export default function Page() {
           This implementation also assumed that the first tab
           should be open when the page loads.
         </p>
+
         <h2>Plain HTML</h2>
+        <p>Notice that it just utilizes skip links instead of buttons, or radios.</p>
         <Part1 />
-        <h2>Refactoring with JSX</h2>
+        <p>Lets see what it looks like so far</p>
+        <div>
+          <h2 id="tabs-title">Tab Title</h2>
+          <div>
+            <ul aria-labelledby="tabs-title">
+              <li>
+                <a id="tab-1" href="#section1">Tab 1</a>
+              </li>
+              <li>
+                <a id="tab-2" href="#section2">Tab 2</a>
+              </li>
+              <li>
+                <a id="tab-3" href="#section3">Tab 3</a>
+              </li>
+            </ul>
+            <div>
+              <section id="section1" aria-labelledby="tab-1">Section 1</section>
+              <section id="section2" aria-labelledby="tab-2">Section 2</section>
+              <section id="section3" aria-labelledby="tab-3">Section 3</section>
+            </div>
+          </div>
+        </div>
+
+        <h2>Now lets refactor with some JSX</h2>
         <Part2 />
-        <h2>Test it out without styles</h2>
-        <Tabs {...part2props} />
+        <p>Now we have to use styling to show & hide content. Lets do this properly with `hidden`.</p>
       </article>
+
+      <Tabs {...props} />
 
     </>
   );
