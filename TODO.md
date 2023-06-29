@@ -4,7 +4,7 @@
 - Update metadata object in each page for better SEO
 - Could <Header> be a part of the Root Layout?
 - A11y test with NVDA and VoiceOver
-- Publish to Github, add actions for testing, linting, axe, lighthouse, dependabot, coveralls
+- Publish to Github, add actions for testing, axe, lighthouse, dependabot, coveralls
 - Read about Nextjs A11y features https://nextjs.org/docs/architecture/accessibility
 - use preferred-reduced-motion for my animations
 - confugre nested css? Remove all stylesheets?
