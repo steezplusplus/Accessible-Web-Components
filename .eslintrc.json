@@ -16,12 +16,6 @@
     "jsx-quotes": [
       "error",
       "prefer-double"
-    ],
-    // "max-len": [
-    //   "warn",
-    //   {
-    //     "code": 80
-    //   }
-    // ]
+    ]
   }
 }
