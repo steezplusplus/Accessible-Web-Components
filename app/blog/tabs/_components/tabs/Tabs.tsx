@@ -16,7 +16,6 @@ export function Tabs(props: TabsProps) {
   const tabsRef = useRef<HTMLUListElement>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log('click');
     if (e.target instanceof HTMLAnchorElement) {
       e.preventDefault(); // Prevent scroll hop
       const clickedTabId = e.target.getAttribute('href') as string;
@@ -25,7 +24,6 @@ export function Tabs(props: TabsProps) {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log('key down');
     switch (e.key) {
       case 'ArrowLeft':
         moveLeft();
@@ -91,6 +89,7 @@ export function Tabs(props: TabsProps) {
                   href={`#section-${i}`}
                   tabIndex={isSelected ? 0 : -1}
                   aria-selected={isSelected}
+                  aria-describedby="focus-hint"
                   role="tab"
                 >
                   {title}
@@ -99,6 +98,9 @@ export function Tabs(props: TabsProps) {
             );
           })}
         </ul>
+
+        <div className="hidden" id="focus-hint">Press tab to move to the tabpanel. Press left or right arrow to move between tabs.</div>
+
         {tabs.map((tab, i) => {
           const { content } = tab;
           const isSelected = selectedTab === `#section-${i}`;
