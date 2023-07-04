@@ -50,11 +50,11 @@ export function Tabs(props: TabsProps) {
   };
 
   return (
-    <div>
-      <h2 id="tabs-title">{title}</h2>
+    <div className="rounded border border-black bg-slate-200 p-2">
+      <h2 id="tabs-title" className="mb-2 text-3xl">{title}</h2>
 
       <div onClick={handleClick} onKeyDown={handleKeyDown}>
-        <ul className="flex gap-x-2" aria-labelledby="tabs-title" role="tablist">
+        <ul className="mb-1 flex gap-x-2" aria-labelledby="tabs-title" role="tablist">
           {tabs.map((tab, i) => {
             const { title } = tab;
             const isSelected = selectedTab === `#section-${i}`;
@@ -73,23 +73,23 @@ export function Tabs(props: TabsProps) {
               </li>
             );
           })}
-          {tabs.map((tab, i) => {
-            const { content } = tab;
-            const isSelected = selectedTab === `#section-${i}`;
-            return (
-              <section
-                className={isSelected ? '' : 'hidden'}
-                id={`section-${i}`}
-                tabIndex={0}
-                aria-labelledby={`tab-${i}`}
-                role="tabpanel"
-                key={`section-${i}`}
-              >
-                {content}
-              </section>
-            );
-          })}
         </ul>
+        {tabs.map((tab, i) => {
+          const { content } = tab;
+          const isSelected = selectedTab === `#section-${i}`;
+          return (
+            <section
+              className={isSelected ? '' : 'hidden'}
+              id={`section-${i}`}
+              tabIndex={0}
+              aria-labelledby={`tab-${i}`}
+              role="tabpanel"
+              key={`section-${i}`}
+            >
+              {content}
+            </section>
+          );
+        })}
       </div>
     </div>
   );
