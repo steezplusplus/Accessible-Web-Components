@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 
 export type TabsProps = {
   title: string;
-  tabs: {
-    title: string;
-    content: string;
-  }[];
+  tabs: TabProps[];
 }
 
-// TODO Have to use a ref to focus
+export type TabProps = {
+  title: string;
+  content: string;
+}
+
 export function Tabs(props: TabsProps) {
   const { title, tabs } = props;
-  const [selectedTab, setSelectedTab] = useState<string>('#section-0'); // TODO can maybe use active element?
+  const [selectedTab, setSelectedTab] = useState<string>('#section-0');
 
-  // TODO Can I move the onlick to the anchor?
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target instanceof HTMLAnchorElement) {
-      e.preventDefault();
+      e.preventDefault(); // Prevent scroll hop
       const clickedTabId = e.target.getAttribute('href') as string;
       setSelectedTab(clickedTabId);
     }
@@ -25,7 +25,7 @@ export function Tabs(props: TabsProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     switch (e.key) {
       case 'ArrowLeft':
-        moveLeft(e);
+        moveLeft();
         break;
       case 'ArrowRight':
         moveRight();
@@ -41,23 +41,12 @@ export function Tabs(props: TabsProps) {
     }
   };
 
-  const moveLeft = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    const selectedTabIndex = +selectedTab.charAt(selectedTab.length - 1);
-    if (selectedTabIndex === 0) {
-      setSelectedTab(`#section-${tabs.length - 1}`);
-    } else {
-      setSelectedTab(`#section-${selectedTabIndex - 1}`);
-    }
-    // Should focus?
+  const moveLeft = () => {
+    // TODO
   };
 
   const moveRight = () => {
-    const selectedTabIndex = +selectedTab.charAt(selectedTab.length - 1);
-    if (selectedTabIndex === tabs.length - 1) {
-      setSelectedTab('#section-0');
-    } else {
-      setSelectedTab(`#section-${selectedTabIndex + 1}`);
-    }
+    // TODO
   };
 
   return (
@@ -65,14 +54,14 @@ export function Tabs(props: TabsProps) {
       <h2 id="tabs-title">{title}</h2>
 
       <div onClick={handleClick} onKeyDown={handleKeyDown}>
-        <ul className="relative" aria-labelledby="tabs-title" role="tablist">
+        <ul className="flex gap-x-2" aria-labelledby="tabs-title" role="tablist">
           {tabs.map((tab, i) => {
-            const { title, content } = tab;
+            const { title } = tab;
             const isSelected = selectedTab === `#section-${i}`;
             return (
               <li key={`tab-${i}`} role="presentation">
                 <a
-                  className="peer focus:text-violet-400 aria-selected:underline"
+                  className="focus:text-violet-400 aria-selected:underline"
                   id={`tab-${i}`}
                   href={`#section-${i}`}
                   tabIndex={isSelected ? 0 : -1}
@@ -81,17 +70,23 @@ export function Tabs(props: TabsProps) {
                 >
                   {title}
                 </a>
-                <section
-                  key={`section-${i}`}
-                  id={`section-${i}`}
-                  className="absolute -bottom-6 left-0 peer-aria-[selected=false]:hidden"
-                  aria-labelledby={`tab-${i}`}
-                  role="tabpanel"
-                  tabIndex={0}
-                >
-                  {content}
-                </section>
               </li>
+            );
+          })}
+          {tabs.map((tab, i) => {
+            const { content } = tab;
+            const isSelected = selectedTab === `#section-${i}`;
+            return (
+              <section
+                className={isSelected ? '' : 'hidden'}
+                id={`section-${i}`}
+                tabIndex={0}
+                aria-labelledby={`tab-${i}`}
+                role="tabpanel"
+                key={`section-${i}`}
+              >
+                {content}
+              </section>
             );
           })}
         </ul>
