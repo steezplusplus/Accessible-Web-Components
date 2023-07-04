@@ -7,15 +7,11 @@ export function Navbar() {
         <NavLink href="/" name="Steez++" />
       </li>
       <li className="ml-auto">
-        <ul className="flex items-center gap-x-6">
-          <li>
-            <NavLink href="/about" name="About" />
-          </li>
-          <li>
-            <NavLink href="/blog" name="Blog" />
-          </li>
-        </ul>
+        <NavLink href="/about" name="About" />
       </li>
-    </ul>
+      <li className="ml-3">
+        <NavLink href="/blog" name="Blog" />
+      </li>
+    </ul >
   );
 }
