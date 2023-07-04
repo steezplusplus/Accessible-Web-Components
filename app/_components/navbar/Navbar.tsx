@@ -6,14 +6,16 @@ export function Navbar() {
       <li>
         <NavLink href="/" name="Steez++" />
       </li>
-      <ul className="ml-auto flex items-center gap-x-6">
-        <li>
-          <NavLink href="/about" name="About" />
-        </li>
-        <li>
-          <NavLink href="/blog" name="Blog" />
-        </li>
-      </ul>
+      <li className="ml-auto">
+        <ul className="flex items-center gap-x-6">
+          <li>
+            <NavLink href="/about" name="About" />
+          </li>
+          <li>
+            <NavLink href="/blog" name="Blog" />
+          </li>
+        </ul>
+      </li>
     </ul>
   );
 }
