@@ -19,6 +19,7 @@ export default async function Blog() {
         <Article title="Accessible Tabs" description={placeholderDescription} slug="tabs" />
         <Article title="Accessible Modal" description={placeholderDescription} slug="modal" />
         <Article title="Accessible Alert" description={placeholderDescription} slug="alert" />
+        <Article title="Accessible Accordion" description={placeholderDescription} slug="accordion" />
       </section>
       <Pagination />
     </>
