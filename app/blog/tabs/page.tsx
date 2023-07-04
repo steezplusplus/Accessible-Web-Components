@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
 'use client';
 
 import { Tabs, TabsProps } from './_components/tabs/Tabs';
-import TabsExample from './example.mdx';
 
 const props: TabsProps = {
   title: 'Tabs Title',
@@ -39,7 +37,6 @@ export default function Page() {
         <div className="not-prose">
           <Tabs {...props} />
         </div>
-        <TabsExample />
       </article>
     </>
   );
