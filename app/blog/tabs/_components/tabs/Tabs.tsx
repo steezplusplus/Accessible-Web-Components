@@ -28,10 +28,10 @@ export function Tabs(props: TabsProps) {
     console.log('key down');
     switch (e.key) {
       case 'ArrowLeft':
-        moveLeft(e);
+        moveLeft();
         break;
       case 'ArrowRight':
-        moveRight(e);
+        moveRight();
         break;
       case 'Home':
         e.preventDefault();
@@ -44,9 +44,7 @@ export function Tabs(props: TabsProps) {
     }
   };
 
-  // If focus is anywhere within the Tab then left and right will move. doenst matter what e.target is
-  const moveLeft = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log('move left', e);
+  const moveLeft = () => {
     const currentTabIndex = parseInt(selectedTab.charAt(selectedTab.length - 1));
     let newTabIndex;
     if (currentTabIndex === 0) {
@@ -61,9 +59,19 @@ export function Tabs(props: TabsProps) {
     newTabElement.focus();
   };
 
-  const moveRight = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log('move right', e);
-    // TODO
+  const moveRight = () => {
+    const currentTabIndex = parseInt(selectedTab.charAt(selectedTab.length - 1));
+    let newTabIndex;
+    if (currentTabIndex === tabs.length - 1) {
+      newTabIndex = 0;
+    } else {
+      newTabIndex = currentTabIndex + 1;
+    }
+
+    const newTabKey = `#section-${newTabIndex}`;
+    const newTabElement = tabsRef.current?.querySelector(`a[href="${newTabKey}"]`) as HTMLAnchorElement;
+    setSelectedTab(newTabKey);
+    newTabElement.focus();
   };
 
   return (
