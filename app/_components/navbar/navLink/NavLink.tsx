@@ -11,7 +11,7 @@ export type NavLinkProps = {
 export function NavLink(props: NavLinkProps) {
   const { href, name } = props;
   const pathname = usePathname();
-  const ariaCurrent = href === pathname ? 'page' : undefined;
+  const ariaCurrent = href === pathname ? 'page' : undefined; // TODO Broken for blog pages
 
   return (
     <Link className="group text-black transition duration-300" href={href} aria-current={ariaCurrent}>
