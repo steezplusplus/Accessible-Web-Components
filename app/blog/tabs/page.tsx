@@ -22,22 +22,20 @@ const props: TabsProps = {
 
 export default function Page() {
   return (
-    <>
-      <article className="prose mx-auto mt-8 md:prose-lg lg:prose-xl">
-        <h1>Tabs with Automatic Activation</h1>
-        <p>
-          A Tab will be automatically activated and its associated Tabpanel will be displayed when the Tab receives focus.
-          This implementation assumes the first Tab and associated Tabpanel is always initially activated.
-          Press Tab and Shift+Tab to navigate focus between the Tab and its associated Tabpanel.
-          Press Left and Right arrows to navigate focus between the Tabs.
-        </p>
-        <p>
-          On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
-        </p>
-        <div className="not-prose">
-          <Tabs {...props} />
-        </div>
-      </article>
-    </>
+    <article className="prose mx-auto mt-8 md:prose-lg lg:prose-xl">
+      <h1>Tabs with Automatic Activation</h1>
+      <p>
+        A Tab will be automatically activated and its associated Tabpanel will be displayed when the Tab receives focus.
+        This implementation assumes the first Tab and associated Tabpanel is always initially activated.
+        Press Tab and Shift+Tab to navigate focus between the Tab and its associated Tabpanel.
+        Press Left and Right arrows to navigate focus between the Tabs.
+      </p>
+      <p>
+        On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
+      </p>
+      <div className="not-prose">
+        <Tabs {...props} />
+      </div>
+    </article>
   );
 }
