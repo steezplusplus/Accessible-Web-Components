@@ -8,11 +8,14 @@
 - Read about Nextjs A11y features https://nextjs.org/docs/architecture/accessibility
 - use preferred-reduced-motion for my animations
 - confugre nested css? Remove all stylesheets?
-- Typography package on blog posts?: https://tailwindcss.com/docs/typography-plugin
+
 - Container queries tailwind package
 - make modal using <dialog>?
 - color fonts https://fonts.google.com/knowledge/introducing_type/introducing_color_fonts
 - downgrade typescript to 5.1.0 compatability issue with eslint
+
+- Typography package on blog posts?: https://tailwindcss.com/docs/typography-plugin
+  - This suggest that I redo syntax highlighting, look at https://prismjs.com/ and https://highlightjs.org
 
 # Last step
 
