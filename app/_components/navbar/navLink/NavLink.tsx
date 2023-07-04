@@ -11,7 +11,16 @@ export type NavLinkProps = {
 export function NavLink(props: NavLinkProps) {
   const { href, name } = props;
   const pathname = usePathname();
-  const ariaCurrent = href === pathname ? 'page' : undefined; // TODO Broken for blog pages
+
+  let ariaCurrent: 'page' | undefined = undefined;
+
+  if (href !== '/' && pathname.startsWith(href)) {
+    ariaCurrent = 'page';
+  }
+
+  if (href === '/' && pathname === '/') {
+    ariaCurrent = 'page';
+  }
 
   return (
     <Link className="group text-black transition duration-300" href={href} aria-current={ariaCurrent}>
