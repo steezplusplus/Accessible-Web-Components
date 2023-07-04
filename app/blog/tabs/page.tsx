@@ -26,6 +26,9 @@ export default function Page() {
     <>
       <article className="prose mx-auto mt-8 md:prose-lg lg:prose-xl">
         <h1>Tabs</h1>
+        <div className="not-prose">
+          <Tabs {...props} />
+        </div>
         <p>
           Many implementations of the Tab exist that do not follow
           proper a11y guidelines. They also tend to have poor UX,
@@ -34,7 +37,6 @@ export default function Page() {
           should be open when the page loads.
         </p>
       </article>
-      <Tabs {...props} />
     </>
   );
 }
