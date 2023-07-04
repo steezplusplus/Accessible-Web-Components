@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 export type TabsProps = {
   title: string;
@@ -13,8 +13,10 @@ export type TabProps = {
 export function Tabs(props: TabsProps) {
   const { title, tabs } = props;
   const [selectedTab, setSelectedTab] = useState<string>('#section-0');
+  const tabsRef = useRef<HTMLUListElement>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    console.log('click');
     if (e.target instanceof HTMLAnchorElement) {
       e.preventDefault(); // Prevent scroll hop
       const clickedTabId = e.target.getAttribute('href') as string;
@@ -23,12 +25,13 @@ export function Tabs(props: TabsProps) {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log('key down');
     switch (e.key) {
       case 'ArrowLeft':
-        moveLeft();
+        moveLeft(e);
         break;
       case 'ArrowRight':
-        moveRight();
+        moveRight(e);
         break;
       case 'Home':
         e.preventDefault();
@@ -41,20 +44,34 @@ export function Tabs(props: TabsProps) {
     }
   };
 
-  const moveLeft = () => {
-    // TODO
+  // If focus is anywhere within the Tab then left and right will move. doenst matter what e.target is
+  const moveLeft = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log('move left', e);
+    const currentTabIndex = parseInt(selectedTab.charAt(selectedTab.length - 1));
+    let newTabIndex;
+    if (currentTabIndex === 0) {
+      newTabIndex = tabs.length - 1;
+    } else {
+      newTabIndex = currentTabIndex - 1;
+    }
+
+    const newTabKey = `#section-${newTabIndex}`;
+    const newTabElement = tabsRef.current?.querySelector(`a[href="${newTabKey}"]`) as HTMLAnchorElement;
+    setSelectedTab(newTabKey);
+    newTabElement.focus();
   };
 
-  const moveRight = () => {
+  const moveRight = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    console.log('move right', e);
     // TODO
   };
 
   return (
-    <div className="rounded border border-black bg-slate-200 p-2">
+    <div className="rounded border border-black bg-slate-200 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
       <h2 id="tabs-title" className="mb-2 text-3xl">{title}</h2>
 
-      <div onClick={handleClick} onKeyDown={handleKeyDown}>
-        <ul className="mb-1 flex gap-x-2" aria-labelledby="tabs-title" role="tablist">
+      <div>
+        <ul className="mb-1 flex gap-x-2" aria-labelledby="tabs-title" role="tablist" ref={tabsRef}>
           {tabs.map((tab, i) => {
             const { title } = tab;
             const isSelected = selectedTab === `#section-${i}`;
