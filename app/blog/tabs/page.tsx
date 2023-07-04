@@ -30,7 +30,7 @@ export default function Page() {
           A Tab will be automatically activated and its associated Tabpabel will be displayed when the Tab receives focus.
           This implementation assumes the first Tab and associated Tabpabel is always initially activated.
           Press Tab and Shift+Tab to navigate focus between the Tab and its associated Tabpanel.
-          Press Left and Right arrows to navigate focuss between the Tabs.
+          Press Left and Right arrows to navigate focus between the Tabs.
         </p>
         <div className="not-prose">
           <Tabs {...props} />
