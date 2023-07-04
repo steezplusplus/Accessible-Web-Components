@@ -25,17 +25,16 @@ export default function Page() {
   return (
     <>
       <article className="prose mx-auto mt-8 md:prose-lg lg:prose-xl">
-        <h1>Tabs</h1>
+        <h1>Tabs with Automatic Activation</h1>
+        <p>
+          A Tab will be automatically activated and its associated Tabpabel will be displayed when the Tab receives focus.
+          This implementation assumes the first Tab and associated Tabpabel is always initially activated.
+          Press Tab and Shift+Tab to navigate focus between the Tab and its associated Tabpanel.
+          Press Left and Right arrows to navigate focuss between the Tabs.
+        </p>
         <div className="not-prose">
           <Tabs {...props} />
         </div>
-        <p>
-          Many implementations of the Tab exist that do not follow
-          proper a11y guidelines. They also tend to have poor UX,
-          because they hide content that cannot be linked to.
-          This implementation also assumed that the first tab
-          should be open when the page loads.
-        </p>
       </article>
     </>
   );
