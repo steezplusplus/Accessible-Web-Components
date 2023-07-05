@@ -29,35 +29,11 @@ export function Panels(props: PanelsProps) {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     switch (e.key) {
-      case 'ArrowUp':
-        moveUp();
-        break;
-      case 'ArrowDown':
-        moveDown();
-        break;
-      case 'Home':
-        e.preventDefault();
-        // TODO expand and focus first panel
-        break;
-      case 'End':
-        e.preventDefault();
-        // TODO expand and focus last panel
-        break;
       case 'Enter':
         e.preventDefault();
         // TODO Open panel
         break;
     }
-  };
-
-  const moveUp = () => {
-    console.log('move up');
-    // TODO expand and focus upper panel
-  };
-
-  const moveDown = () => {
-    console.log('move down');
-    // TODO expand and focus lower panel
   };
 
   return (
@@ -72,11 +48,12 @@ export function Panels(props: PanelsProps) {
           const ariaExpanded = `${key}` === expandedPanel;
           return (
             <div key={key} ref={panelsRef}>
-              <h2 className="rounded border border-black hover:cursor-pointer">
+              <h3 className="rounded border border-black hover:cursor-pointer">
                 <button
                   className="flex w-full items-center px-1"
                   aria-expanded={ariaExpanded}
                   data-key={key}
+                  id={`panel-${key}`}
                 >
                   <span>{label}</span>
                   <FontAwesomeIcon
@@ -84,10 +61,13 @@ export function Panels(props: PanelsProps) {
                     className="ml-auto"
                   />
                 </button>
-              </h2>
-              <section className={ariaExpanded ? '' : 'hidden'}>
+              </h3>
+              <div
+                className={ariaExpanded ? '' : 'hidden'}
+                aria-labelledby={`panel-${key}`}
+              >
                 {children}
-              </section>
+              </div>
             </div>
           );
         })}
