@@ -1,30 +1,33 @@
+'use client';
+
 import { faArrowAltCircleDown, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { JSX, useState } from 'react';
 
 export type PanelProps = {
-  label: string;
-  children: JSX.Element;
+  header: string;
+  content: JSX.Element;
 };
 
-export type PanelsProps = {
+export type AccordionProps = {
   panels: PanelProps[];
 };
 
 // TODO Missing aria controls
 // TODO Rename to "Accordion", each accordion contains a header and panel
 // TODO Break into seperate components
-export function Panels(props: PanelsProps) {
+// TODO Move event handlers to listen to the button element
+export function Accordion(props: AccordionProps) {
   const { panels } = props;
-  const [expandedPanel, setExpandedPanel] = useState<string>('');
+  const [expandedPanelIndex, setExpandedPanelIndex] = useState<number | null>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (e.target instanceof HTMLButtonElement) {
-      const clickedPanelKey = e.target.getAttribute('data-key') as string;
-      if (clickedPanelKey === expandedPanel) {
-        setExpandedPanel('');
+      const clickedPanelIndex = parseInt(e.target.getAttribute('data-index') as string);
+      if (clickedPanelIndex === expandedPanelIndex) {
+        setExpandedPanelIndex(null);
       } else {
-        setExpandedPanel(clickedPanelKey);
+        setExpandedPanelIndex(clickedPanelIndex);
       }
     }
   };
@@ -34,11 +37,11 @@ export function Panels(props: PanelsProps) {
       case 'Enter':
         e.preventDefault();
         if (e.target instanceof HTMLButtonElement) {
-          const enteredPanelKey = e.target.getAttribute('data-key') as string;
-          if (enteredPanelKey === expandedPanel) {
-            setExpandedPanel('');
+          const clickedPanelIndex = parseInt(e.target.getAttribute('data-index') as string);
+          if (clickedPanelIndex === expandedPanelIndex) {
+            setExpandedPanelIndex(null);
           } else {
-            setExpandedPanel(enteredPanelKey);
+            setExpandedPanelIndex(clickedPanelIndex);
           }
         }
         break;
@@ -52,31 +55,31 @@ export function Panels(props: PanelsProps) {
       onKeyDown={handleKeyDown}
     >
       {
-        panels.map((panel, key) => {
-          const { label, children } = panel;
-          const ariaExpanded = `${key}` === expandedPanel;
+        panels.map((panel, index) => {
+          const { header, content } = panel;
+          const isExpanded = index === expandedPanelIndex;
           return (
-            <div key={key}>
-              <h3 className="rounded border border-black hover:cursor-pointer">
+            <div key={index}>
+              <h2 className="rounded border border-black hover:cursor-pointer">
                 <button
                   className="flex w-full items-center px-1"
-                  aria-expanded={ariaExpanded}
-                  data-key={key}
-                  id={`panel-${key}`}
+                  aria-expanded={isExpanded}
+                  data-index={index}
+                  id={`panel-${index}`}
                 >
-                  <span>{label}</span>
+                  <span>{header}</span>
                   <FontAwesomeIcon
-                    icon={ariaExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}
+                    icon={isExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}
                     className="ml-auto"
                   />
                 </button>
-              </h3>
+              </h2>
               <div
-                className={ariaExpanded ? '' : 'hidden'}
-                aria-labelledby={`panel-${key}`}
+                hidden={!isExpanded}
+                aria-labelledby={`panel-${index}`}
                 role="region"
               >
-                {children}
+                {content}
               </div>
             </div>
           );
