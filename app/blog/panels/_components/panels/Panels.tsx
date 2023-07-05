@@ -11,6 +11,9 @@ export type PanelsProps = {
   panels: PanelProps[];
 };
 
+// TODO Missing aria controls
+// TODO Rename to "Accordion", each accordion contains a header and panel
+// TODO Break into seperate components
 export function Panels(props: PanelsProps) {
   const { panels } = props;
   const [expandedPanel, setExpandedPanel] = useState<string>('');
