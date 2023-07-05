@@ -1,6 +1,6 @@
 import { faArrowAltCircleDown, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { JSX, useState } from 'react';
+import React, { JSX, useState, useRef } from 'react';
 
 export type PanelProps = {
   key: string;
@@ -15,9 +15,13 @@ export type PanelsProps = {
 export function Panels(props: PanelsProps) {
   const { panels } = props;
   const [expandedPanel, setExpandedPanel] = useState<string>(panels[0].key);
+  const panelsRef = useRef<HTMLDivElement>(null);
 
-  const handleClick = () => {
-    console.log('click');
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.target instanceof HTMLButtonElement) {
+      const clickedPanelKey = e.target.getAttribute('data-key') as string;
+      setExpandedPanel(clickedPanelKey);
+    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -68,11 +72,12 @@ export function Panels(props: PanelsProps) {
           const { key, label, children } = panel;
           const ariaExpanded = key === expandedPanel;
           return (
-            <div key={key} >
+            <div key={key} ref={panelsRef}>
               <h2 className="rounded border border-black hover:cursor-pointer">
                 <button
                   className="flex w-full items-center px-1"
                   aria-expanded={ariaExpanded}
+                  data-key={key}
                 >
                   <span>{label}</span>
                   <FontAwesomeIcon
