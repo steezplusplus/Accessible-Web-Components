@@ -48,10 +48,6 @@ export function Panels(props: PanelsProps) {
         e.preventDefault();
         // TODO Open panel
         break;
-      case 'Space':
-        e.preventDefault();
-        // TODO Open panel
-        break;
     }
   };
 
