@@ -1,6 +1,6 @@
-import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { faArrowAltCircleDown, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { JSX } from 'react';
+import React, { JSX, useState } from 'react';
 
 export type PanelProps = {
   key: string;
@@ -14,6 +14,7 @@ export type PanelsProps = {
 
 export function Panels(props: PanelsProps) {
   const { panels } = props;
+  const [expandedPanel, setExpandedPanel] = useState<string>(panels[0].key);
 
   const handleClick = () => {
     console.log('click');
@@ -29,21 +30,31 @@ export function Panels(props: PanelsProps) {
         break;
       case 'Home':
         e.preventDefault();
-        // TODO select first tab
+        // TODO expand and focus first panel
         break;
       case 'End':
         e.preventDefault();
-        // TODO select last tab
+        // TODO expand and focus last panel
+        break;
+      case 'Enter':
+        e.preventDefault();
+        // TODO Open panel
+        break;
+      case 'Space':
+        e.preventDefault();
+        // TODO Open panel
         break;
     }
   };
 
   const moveUp = () => {
     console.log('move up');
+    // TODO expand and focus upper panel
   };
 
   const moveDown = () => {
     console.log('move down');
+    // TODO expand and focus lower panel
   };
 
   return (
@@ -55,15 +66,22 @@ export function Panels(props: PanelsProps) {
       {
         panels.map((panel) => {
           const { key, label, children } = panel;
+          const ariaExpanded = key === expandedPanel;
           return (
             <div key={key} >
               <h2 className="rounded border border-black hover:cursor-pointer">
-                <button className="flex w-full items-center px-1">
+                <button
+                  className="flex w-full items-center px-1"
+                  aria-expanded={ariaExpanded}
+                >
                   <span>{label}</span>
-                  <FontAwesomeIcon icon={faArrowAltCircleDown} className="ml-auto" />
+                  <FontAwesomeIcon
+                    icon={ariaExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}
+                    className="ml-auto"
+                  />
                 </button>
               </h2>
-              <section className="prose hidden">
+              <section className={ariaExpanded ? '' : 'hidden'}>
                 {children}
               </section>
             </div>
