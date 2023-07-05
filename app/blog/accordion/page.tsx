@@ -35,7 +35,9 @@ export default function Page() {
           On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
-      <Accordion panels={panels} />
+      <div className="mx-auto max-w-prose">
+        <Accordion panels={panels} />
+      </div>
     </>
   );
 }
