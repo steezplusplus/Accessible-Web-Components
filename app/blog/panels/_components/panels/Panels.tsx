@@ -65,6 +65,7 @@ export function Panels(props: PanelsProps) {
               <div
                 className={ariaExpanded ? '' : 'hidden'}
                 aria-labelledby={`panel-${key}`}
+                role="region"
               >
                 {children}
               </div>
