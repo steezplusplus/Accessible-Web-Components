@@ -1,12 +1,12 @@
-import { Modal } from './_components/modal/Modal';
+import { Dialog } from './_components/dialog/Dialog';
 
 export default function Page() {
   return (
     <>
       <article className="prose mx-auto my-8 md:prose-lg lg:prose-xl">
-        <h1>Modal</h1>
+        <h1>Dialog</h1>
       </article>
-      <Modal />
+      <Dialog />
     </>
   );
 }

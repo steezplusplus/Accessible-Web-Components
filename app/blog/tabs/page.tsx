@@ -1,5 +1,3 @@
-'use client';
-
 import { Tabs, TabsProps } from './_components/tabs/Tabs';
 
 const props: TabsProps = {
