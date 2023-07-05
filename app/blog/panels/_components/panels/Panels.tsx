@@ -1,3 +1,5 @@
+import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { JSX } from 'react';
 
 export type PanelProps = {
@@ -12,7 +14,10 @@ export type PanelsProps = {
 
 export function Panels(props: PanelsProps) {
   const { panels } = props;
-  const handleClick = () => { };
+
+  const handleClick = () => {
+    console.log('click');
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     switch (e.key) {
@@ -33,25 +38,37 @@ export function Panels(props: PanelsProps) {
     }
   };
 
-  const moveUp = () => { };
+  const moveUp = () => {
+    console.log('move up');
+  };
 
-  const moveDown = () => { };
+  const moveDown = () => {
+    console.log('move down');
+  };
 
   return (
-    <div>
-      {panels.map((panel) => {
-        const { key, label, children } = panel;
-        return (
-          <div key={key} onClick={handleClick} onKeyDown={handleKeyDown}>
-            <h2>
-              <button>{label}</button>
-            </h2>
-            <section>
-              {children}
-            </section>
-          </div>
-        );
-      })}
+    <div
+      className="rounded border border-black bg-slate-200 p-2"
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
+      {
+        panels.map((panel) => {
+          const { key, label, children } = panel;
+          return (
+            <div key={key} >
+              <h2 className="rounded border border-black hover:cursor-pointer">
+                <button className="flex w-full items-center px-1">
+                  <span>{label}</span>
+                  <FontAwesomeIcon icon={faArrowAltCircleDown} className="ml-auto" />
+                </button>
+              </h2>
+              <section className="prose hidden">
+                {children}
+              </section>
+            </div>
+          );
+        })}
     </div>
   );
 }
