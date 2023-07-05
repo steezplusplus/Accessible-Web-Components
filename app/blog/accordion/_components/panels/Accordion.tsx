@@ -13,7 +13,6 @@ export type AccordionProps = {
   panels: PanelProps[];
 };
 
-// TODO Missing aria controls
 // TODO Rename to "Accordion", each accordion contains a header and panel
 // TODO Break into seperate components
 // TODO Move event handlers to listen to the button element
@@ -64,19 +63,21 @@ export function Accordion(props: AccordionProps) {
                 <button
                   className="flex w-full items-center px-1"
                   aria-expanded={isExpanded}
+                  aria-controls={`content-${index}`}
+                  id={`header-${index}`}
                   data-index={index}
-                  id={`panel-${index}`}
                 >
                   <span>{header}</span>
                   <FontAwesomeIcon
-                    icon={isExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}
                     className="ml-auto"
+                    icon={isExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}
                   />
                 </button>
               </h2>
               <div
                 hidden={!isExpanded}
-                aria-labelledby={`panel-${index}`}
+                aria-labelledby={`header-${index}`}
+                id={`content-${index}`}
                 role="region"
               >
                 {content}
