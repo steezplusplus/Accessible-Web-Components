@@ -17,22 +17,25 @@ const panels: PanelProps[] = [
 
 export default function Page() {
   return (
-    <article className="prose mx-auto mt-8 md:prose-lg lg:prose-xl">
-      <h1>Accordion</h1>
-      <p>
-        Each accordion contains a header and an associated panel. Interacting with the header
-        toggles between hiding and showing the associated panel.
-      </p>
-      <p>
-        The accordion header uses an h2 element in this example, so it fits correctly within this page.
-        This may need to be adjusted to fit proper heading guidelines depending on your page.
-      </p>
-      <p>
-        On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
-      </p>
-      <div className="not-prose">
-        <Accordion panels={panels} />
-      </div>
-    </article>
+    <>
+      <article className="prose mx-auto my-8 md:prose-lg lg:prose-xl">
+        <header>
+          <h1>Accordion</h1>
+        </header>
+        <p>
+          Each accordion contains a header and an associated panel. Interacting with the header
+          toggles between hiding and showing the associated panel.
+        </p>
+        <p>
+          When focused on a header, pressing Enter or Space will open the associated panel, and close the rest of them.
+          Tab and Shift+Tab is used to navigate between the headers.
+          If the panels contain focusable elements (i.e. form elements), they will properly enter and exit focus order.
+        </p>
+        <p>
+          On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
+        </p>
+      </article>
+      <Accordion panels={panels} />
+    </>
   );
 }
