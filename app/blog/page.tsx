@@ -19,7 +19,7 @@ export default async function Blog() {
         {/* <Article title="Accessible Buttons" description={placeholderDescription} slug="buttons" /> */}
         {/* <Article title="Accessible Checkboxes" description={placeholderDescription} slug="checkboxes" /> */}
         {/* <Article title="Accessible Radios" description={placeholderDescription} slug="radios" /> */}
-        <Article title="Tabs" description={tabsDescription} slug="tabs" />
+        <Article title="Tabs with Automatic Activation" description={tabsDescription} slug="tabs" />
         {/* <Article title="Accessible Modal" description={placeholderDescription} slug="modal" /> */}
         {/* // <Article title="Accessible Alert" description={placeholderDescription} slug="alert" /> */}
         <Article title="Accordion" description={accordionDescrpition} slug="accordion" />
