@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { JSX, useState, useRef } from 'react';
 
 export type PanelProps = {
-  key: string;
   label: string;
   children: JSX.Element;
 };
@@ -68,9 +67,9 @@ export function Panels(props: PanelsProps) {
       onKeyDown={handleKeyDown}
     >
       {
-        panels.map((panel) => {
-          const { key, label, children } = panel;
-          const ariaExpanded = key === expandedPanel;
+        panels.map((panel, key) => {
+          const { label, children } = panel;
+          const ariaExpanded = `${key}` === expandedPanel;
           return (
             <div key={key} ref={panelsRef}>
               <h2 className="rounded border border-black hover:cursor-pointer">
