@@ -13,45 +13,35 @@ export type AccordionProps = {
   panels: PanelProps[];
 };
 
-// TODO Rename to "Accordion", each accordion contains a header and panel
-// TODO Break into seperate components
-// TODO Move event handlers to listen to the button element
-export function Accordion(props: AccordionProps) {
-  const { panels } = props;
+export function Accordion({ panels }: AccordionProps) {
   const [expandedPanelIndex, setExpandedPanelIndex] = useState<number | null>(null);
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (e.target instanceof HTMLButtonElement) {
-      const clickedPanelIndex = parseInt(e.target.getAttribute('data-index') as string);
-      if (clickedPanelIndex === expandedPanelIndex) {
-        setExpandedPanelIndex(null);
-      } else {
-        setExpandedPanelIndex(clickedPanelIndex);
-      }
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const clickedPanelHeader = e.target as HTMLButtonElement;
+    const clickedPanelIndex = parseInt(clickedPanelHeader.getAttribute('data-index') as string);
+    if (clickedPanelIndex === expandedPanelIndex) {
+      setExpandedPanelIndex(null);
+    } else {
+      setExpandedPanelIndex(clickedPanelIndex);
     }
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    switch (e.key) {
-      case 'Enter':
-        e.preventDefault();
-        if (e.target instanceof HTMLButtonElement) {
-          const clickedPanelIndex = parseInt(e.target.getAttribute('data-index') as string);
-          if (clickedPanelIndex === expandedPanelIndex) {
-            setExpandedPanelIndex(null);
-          } else {
-            setExpandedPanelIndex(clickedPanelIndex);
-          }
-        }
-        break;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const enteredPanelHeader = e.target as HTMLButtonElement;
+      const enteredPanelIndex = parseInt(enteredPanelHeader.getAttribute('data-index') as string);
+      if (enteredPanelIndex === expandedPanelIndex) {
+        setExpandedPanelIndex(null);
+      } else {
+        setExpandedPanelIndex(enteredPanelIndex);
+      }
     }
   };
 
   return (
     <div
       className="rounded border border-black bg-slate-200 p-2"
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
     >
       {
         panels.map((panel, index) => {
@@ -66,6 +56,8 @@ export function Accordion(props: AccordionProps) {
                   aria-controls={`content-${index}`}
                   id={`header-${index}`}
                   data-index={index}
+                  onClick={handleClick}
+                  onKeyDown={handleKeyDown}
                 >
                   <span>{header}</span>
                   <FontAwesomeIcon
