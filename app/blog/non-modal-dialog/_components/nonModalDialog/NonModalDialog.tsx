@@ -21,14 +21,19 @@ export function NonModalDialog() {
 
   return (
     <>
-      <button onClick={openDialog} className="rounded border">Open Dialog</button>
-      <dialog ref={dialogRef} className="rounded border border-black bg-slate-200 p-2">
-        <header className="flex">
-          <h2 className="mr-4 text-lg">This is a non-modal dialog!</h2>
+      <button onClick={openDialog} className="prose rounded border px-2 py-1 text-sm">Open a Non-Modal Dialog...</button>
+      <dialog ref={dialogRef} className="prose fixed bottom-1/3 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1">
+        <header className="flex justify-center">
+          <h2>This is a non-modal dialog!</h2>
           <button onClick={closeDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </header>
+        <p>
+          You can still interact with the primary application window.
+          <br />
+          Try Tab and Shift+Tab to navigate, or highlight text with your cursor.
+        </p>
       </dialog>
     </>
   );

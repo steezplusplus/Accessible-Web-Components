@@ -22,17 +22,19 @@ export function ModalDialog() {
 
   return (
     <>
-      <button onClick={openModal} className="rounded border">Open Modal</button>
-      <dialog ref={modalRef} className="rounded border border-black bg-slate-200">
-        <header className="flex">
+      <button onClick={openModal} className="prose rounded border px-2 py-1 text-sm">Open a Modal Dialog...</button>
+      <dialog ref={modalRef} className="prose fixed top-1/4 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1">
+        <header className="flex justify-center">
           <h2>This is a modal dialog!</h2>
           <button onClick={closeModal} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </header>
-        <form method="dialog">
-          <button className="rounded border">Close and Submit</button>
-        </form>
+        <p>
+          You can no longer interact with the primary application window.
+          <br />
+          Close the modal dialog to resume.
+        </p>
       </dialog>
     </>
   );
