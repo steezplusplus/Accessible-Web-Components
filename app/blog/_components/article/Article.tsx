@@ -9,16 +9,16 @@ export type ArticleProps = {
 export function Article(props: ArticleProps) {
   const { title, description, slug } = props;
   return (
-    <article className="rounded-md border p-2">
-      <header>
+    <li className="rounded border border-black p-3">
+      <h2 className="mb-2 border-b">
         <Link
           className="text-2xl font-bold tracking-tight text-blue-900 hover:underline"
           href={`/blog/${slug}`}
         >
           {title}
         </Link>
-      </header>
-      <p className="border-t font-light">{description}</p>
-    </article >
+      </h2>
+      <p className="font-light">{description}</p>
+    </li >
   );
 }

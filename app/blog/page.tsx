@@ -1,4 +1,4 @@
-import { Pagination } from './_components/pagination/Pagination';
+// import { Pagination } from './_components/pagination/Pagination'; // TODO or lazy load?
 import { Article } from './_components/article/Article';
 import { Header } from './_components/header/Header';
 
@@ -17,13 +17,13 @@ export default async function Blog() {
   return (
     <>
       <Header />
-      <section className="grid gap-10 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-10 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <Article title="Tabs with Automatic Activation" description={tabsDescription} slug="tabs" />
         <Article title="Non-Modal Dialog" description={dialogDescription} slug="non-modal-dialog" />
         <Article title="Modal Dialog" description={modalDescription} slug="modal-dialog" />
         <Article title="Accordion" description={accordionDescrpition} slug="accordion" />
-      </section>
-      <Pagination />
+      </ul>
+      {/* <Pagination /> */}
     </>
   );
 }
