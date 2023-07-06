@@ -7,7 +7,8 @@ export default function Page() {
         <header>
           <h1>Alert Dialog</h1>
           <p>
-            TODO
+            An Alert Dialog is a descendant window of the primary application window that blocks interacting with the primary application window until
+            {' '} the user has responded to it. This makes a <i>modal dialog</i>, except to specifically notify the user with some critical information.
           </p>
         </header>
         <p>
