@@ -8,8 +8,8 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
 export const metadata = {
-  title: 'Steez++ | Home',
-  description: 'Steezy',
+  title: 'Steez++',
+  description: 'Supporting resources to make the web accessible',
 };
 
 export default function RootLayout({

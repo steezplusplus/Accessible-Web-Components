@@ -1,5 +1,10 @@
 import { AlertDialog } from './_components/alertDialog/AlertDialog';
 
+export const metadata = {
+  title: 'Steez++ | Alert Dialog',
+  description: 'Supporting resources to make the web accessible',
+};
+
 export default function Page() {
   return (
     <>

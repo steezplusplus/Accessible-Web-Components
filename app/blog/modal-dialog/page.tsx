@@ -1,5 +1,10 @@
 import { ModalDialog } from './_components/modalDialog/ModalDialog';
 
+export const metadata = {
+  title: 'Steez++ | Modal Dialog',
+  description: 'Supporting resources to make the web accessible',
+};
+
 export default function Page() {
   return (
     <>

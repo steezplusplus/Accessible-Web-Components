@@ -1,5 +1,10 @@
 import { Tabs, TabsProps } from './_components/tabs/Tabs';
 
+export const metadata = {
+  title: 'Steez++ | Tabs',
+  description: 'Supporting resources to make the web accessible',
+};
+
 const props: TabsProps = {
   title: 'Tabs Title',
   tabs: [

@@ -4,7 +4,7 @@ import { Header } from './_components/header/Header';
 
 export const metadata = {
   title: 'Steez++ | Blog',
-  description: 'Steezy',
+  description: 'Supporting resources to make the web accessible',
 };
 
 export default async function Blog() {

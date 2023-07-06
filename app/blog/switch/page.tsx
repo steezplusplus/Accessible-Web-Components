@@ -1,5 +1,10 @@
 import { Switch } from './_components/switch/Switch';
 
+export const metadata = {
+  title: 'Steez++ | Switch',
+  description: 'Supporting resources to make the web accessible',
+};
+
 export default function Page() {
   return (
     <>
