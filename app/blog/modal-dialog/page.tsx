@@ -1,4 +1,4 @@
-import { Modal } from './_components/modal/Modal';
+import { ModalDialog } from './_components/modalDialog/ModalDialog';
 
 export default function Page() {
   return (
@@ -8,14 +8,14 @@ export default function Page() {
           <h1>Modal Dialog</h1>
         </header>
         <p>
-          A Modal Dialog is a type of <a href="/blog/dialog">Dialog</a> that blocks interacting with the primary application window.
+          A Modal Dialog is a descendant window of the primary application window that blocks interacting with the primary application window.
         </p>
         <p>
           On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
       <div className="mx-auto max-w-prose">
-        <Modal />
+        <ModalDialog />
       </div>
     </>
   );

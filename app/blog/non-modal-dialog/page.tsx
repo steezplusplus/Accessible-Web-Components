@@ -1,4 +1,4 @@
-import { Dialog } from './_components/dialog/Dialog';
+import { NonModalDialog } from './_components/nonModalDialog/NonModalDialog';
 
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
         </p>
       </article>
       <div className="mx-auto max-w-prose">
-        <Dialog />
+        <NonModalDialog />
       </div>
     </>
   );

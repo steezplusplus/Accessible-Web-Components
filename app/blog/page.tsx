@@ -19,8 +19,8 @@ export default async function Blog() {
       <Header />
       <section className="grid gap-10 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <Article title="Tabs with Automatic Activation" description={tabsDescription} slug="tabs" />
-        <Article title="Dialog" description={dialogDescription} slug="dialog" />
-        <Article title="Modal" description={modalDescription} slug="modal" />
+        <Article title="Non-Modal Dialog" description={dialogDescription} slug="non-modal-dialog" />
+        <Article title="Modal Dialog" description={modalDescription} slug="modal-dialog" />
         <Article title="Accordion" description={accordionDescrpition} slug="accordion" />
       </section>
       <Pagination />

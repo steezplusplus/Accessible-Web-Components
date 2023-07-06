@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
 
 // TODO refactor to Modal Dialog
-export function Modal() {
+export function ModalDialog() {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   const openModal = () => {

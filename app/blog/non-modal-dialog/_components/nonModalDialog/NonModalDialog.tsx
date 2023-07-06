@@ -4,8 +4,7 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
 
-// TODO refactor to NonModalDialog
-export function Dialog() {
+export function NonModalDialog() {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const openDialog = () => {
