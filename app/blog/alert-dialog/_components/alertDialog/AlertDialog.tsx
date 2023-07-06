@@ -4,12 +4,15 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
 
+const labelId = 'alert-dialog-label';
+const descriptionId = 'alert-dialog-descripton';
+
 export function AlertDialog() {
   const alertDialogRef = useRef<HTMLDialogElement>(null);
 
   const showAlertDialog = () => {
     if (alertDialogRef.current) {
-      alertDialogRef.current.show();
+      alertDialogRef.current.showModal();
     }
   };
 
@@ -24,18 +27,22 @@ export function AlertDialog() {
       <button onClick={showAlertDialog} className="prose rounded border px-2 py-1 text-sm">Open Alert Dialog...</button>
       <dialog
         ref={alertDialogRef}
-        aria-labelledby="alert-dialog-label"
-        className="prose fixed bottom-1/3 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1"
+        aria-labelledby={labelId}
+        aria-describedby={descriptionId}
+        className="prose fixed bottom-1/3 h-36 rounded border border-black bg-red-400 p-2 prose-h2:my-1"
+        role="alertdialog"
       >
-        <header className="flex justify-center">
-          <h2 id="alert-dialog-label">This is an alert dialog!</h2>
+        <div className="flex justify-center">
+          <h2 id={labelId}>This is an alert dialog!</h2>
           <button onClick={closeAlertDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
-        </header>
-        <p>
-          Say some stuff...
-        </p>
+        </div>
+        <div id={descriptionId}>
+          <p>
+            Oh no! This means there was an error.
+          </p>
+        </div>
       </dialog>
     </>
   );

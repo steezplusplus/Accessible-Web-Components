@@ -4,40 +4,44 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
 
-export function NonModalDialog() {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+const labelId = 'non-modal-dialog-label';
+const descriptionId = 'non-modal-dialog-description';
 
-  const openDialog = () => {
-    if (dialogRef.current) {
-      dialogRef.current.show();
+export function NonModalDialog() {
+  const nonModalDialogRef = useRef<HTMLDialogElement>(null);
+
+  const showNonModalDialog = () => {
+    if (nonModalDialogRef.current) {
+      nonModalDialogRef.current.show();
     }
   };
 
-  const closeDialog = () => {
-    if (dialogRef.current) {
-      dialogRef.current.close();
+  const closeNonModalDialog = () => {
+    if (nonModalDialogRef.current) {
+      nonModalDialogRef.current.close();
     }
   };
 
   return (
     <>
-      <button onClick={openDialog} className="prose rounded border px-2 py-1 text-sm">Open a Non-Modal Dialog...</button>
+      <button onClick={showNonModalDialog} className="prose rounded border px-2 py-1 text-sm">Open a Non-Modal Dialog...</button>
       <dialog
-        ref={dialogRef}
-        aria-labelledby="dialog-label"
+        ref={nonModalDialogRef}
+        aria-labelledby={labelId}
+        aria-describedby={descriptionId}
         className="prose fixed bottom-1/3 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1"
       >
-        <header className="flex justify-center">
-          <h2 id="dialog-label">This is a non-modal dialog!</h2>
-          <button onClick={closeDialog} className="ml-auto">
+        <div className="flex justify-center">
+          <h2 id={labelId}>This is a non-modal dialog!</h2>
+          <button onClick={closeNonModalDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
-        </header>
-        <p>
-          You can still interact with the primary application window.
-          <br />
-          Try Tab and Shift+Tab to navigate, or highlight text with your cursor.
-        </p>
+        </div>
+        <div id={descriptionId}>
+          <p>
+            You can still interact with the primary application window while this is open.
+          </p>
+        </div>
       </dialog>
     </>
   );

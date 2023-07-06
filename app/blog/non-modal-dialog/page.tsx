@@ -5,9 +5,9 @@ export default function Page() {
     <>
       <article className="prose mx-auto my-8 md:prose-lg lg:prose-xl">
         <header>
-          <h1>Dialog</h1>
+          <h1>Non Modal Dialog</h1>
           <p>
-            A Dialog is a descendant window of the primary application window that does not block interacting with the primary application window.
+            A Non Modal Dialog is a descendant window of the primary application window that does not block interacting with the primary application window.
           </p>
         </header>
         <p>
