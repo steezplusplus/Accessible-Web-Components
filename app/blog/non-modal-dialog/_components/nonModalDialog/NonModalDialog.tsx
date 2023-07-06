@@ -22,9 +22,13 @@ export function NonModalDialog() {
   return (
     <>
       <button onClick={openDialog} className="prose rounded border px-2 py-1 text-sm">Open a Non-Modal Dialog...</button>
-      <dialog ref={dialogRef} className="prose fixed bottom-1/3 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1">
+      <dialog
+        ref={dialogRef}
+        aria-labelledby="dialog-label"
+        className="prose fixed bottom-1/3 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1"
+      >
         <header className="flex justify-center">
-          <h2>This is a non-modal dialog!</h2>
+          <h2 id="dialog-label">This is a non-modal dialog!</h2>
           <button onClick={closeDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
