@@ -29,12 +29,12 @@ export function AlertDialog() {
         ref={alertDialogRef}
         aria-labelledby={labelId}
         aria-describedby={descriptionId}
-        className="prose fixed bottom-1/3 h-36 rounded border border-black bg-red-400 p-2 prose-h2:my-1"
+        className="prose fixed top-1/4 h-fit rounded border border-black bg-red-400 p-2 prose-h2:my-1 prose-p:my-1"
         role="alertdialog"
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-x-4">
           <h2 id={labelId}>This is an alert dialog!</h2>
-          <button onClick={closeAlertDialog} className="ml-auto">
+          <button onClick={closeAlertDialog}>
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </div>

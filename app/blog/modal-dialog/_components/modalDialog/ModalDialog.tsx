@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
 
 const labelId = 'modal-dialog-label';
-const descriptionId = 'modal-dialog-description';
 
 export function ModalDialog() {
   const modaDialogRef = useRef<HTMLDialogElement>(null);
@@ -29,19 +28,13 @@ export function ModalDialog() {
 
         ref={modaDialogRef}
         aria-labelledby={labelId}
-        aria-describedby={descriptionId}
-        className="prose fixed top-1/4 h-36 rounded border border-black bg-slate-200 p-2 prose-h2:my-1"
+        className="prose fixed top-1/4 h-fit rounded border border-black bg-slate-200 p-2 prose-h2:my-1"
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-x-4">
           <h2 id={labelId}>This is a modal dialog!</h2>
-          <button onClick={closeModalDialog} className="ml-auto">
+          <button onClick={closeModalDialog}>
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
-        </div>
-        <div id={descriptionId}>
-          <p>
-            You can not interact with the primary application window while this is open.
-          </p>
         </div>
       </dialog>
     </>
