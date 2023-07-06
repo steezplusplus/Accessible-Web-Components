@@ -14,8 +14,9 @@ export default function Page() {
           On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
-      <button>Open Dialog</button>
-      <Dialog />
+      <div className="mx-auto max-w-prose">
+        <Dialog />
+      </div>
     </>
   );
 }

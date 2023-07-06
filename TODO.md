@@ -14,6 +14,9 @@
 - color fonts https://fonts.google.com/knowledge/introducing_type/introducing_color_fonts
 - downgrade typescript to 5.1.0 compatability issue with eslint
 
+- Why not use <details> element for the accordion?
+  - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+
 - Typography package on blog posts?: https://tailwindcss.com/docs/typography-plugin
   - This suggest that I redo syntax highlighting, look at https://prismjs.com/ and https://highlightjs.org
 
