@@ -14,6 +14,7 @@ export default async function Blog() {
   const modalDescription = 'A Modal overlays the primary window with a modal window, where the modal window does not allow the user to interact with primary window.';
   const dialogDescription = 'A Dialog overlays the primary window with a dialog window, where the dialog window and primary window can simultaneously be interacted with by the user.';
   const alertDialogDescription = 'An Alert Dialog overlays the primary window with an alert modal window, where the alert modal windows does not allow the user to interact with the primary window.';
+  const switchDescription = '';
 
 
   return (
@@ -25,6 +26,7 @@ export default async function Blog() {
         <Article title="Alert Dialog" description={alertDialogDescription} slug="alert-dialog" />
         <Article title="Accordion" description={accordionDescrpition} slug="accordion" />
         <Article title="Tabs with Automatic Activation" description={tabsDescription} slug="tabs" />
+        <Article title="Switch" description={switchDescription} slug="switch" />
       </ul>
       {/* <Pagination /> */}
     </>
