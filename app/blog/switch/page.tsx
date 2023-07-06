@@ -15,8 +15,10 @@ export default function Page() {
           On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
-      <div className="flex items-center justify-center">
-        <Switch />
+      <div className="flex flex-col items-center justify-center gap-y-4">
+        <Switch label="Label 1" />
+        <Switch label="Label 2" />
+        <Switch label="Label 3" />
       </div>
     </>
   );
