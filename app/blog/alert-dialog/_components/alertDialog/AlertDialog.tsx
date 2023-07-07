@@ -24,23 +24,23 @@ export function AlertDialog() {
 
   return (
     <>
-      <button onClick={showAlertDialog} className="prose rounded border px-2 py-1 text-sm">Open Alert Dialog...</button>
+      <button onClick={showAlertDialog} className="rounded border px-2 py-1 hover:bg-slate-100">Open Alert Dialog...</button>
       <dialog
         ref={alertDialogRef}
         aria-labelledby={labelId}
         aria-describedby={descriptionId}
-        className="prose fixed top-1/4 h-fit rounded border border-black bg-red-400 p-2 prose-h2:my-1 prose-p:my-1"
+        className="fixed top-1/4 h-fit rounded border border-black bg-red-400 p-2"
         role="alertdialog"
       >
-        <div className="flex justify-center gap-x-4">
-          <h2 id={labelId}>This is an alert dialog!</h2>
-          <button onClick={closeAlertDialog}>
+        <div className="flex">
+          <h2 id={labelId} className="text-xl font-semibold">Oh no!</h2>
+          <button onClick={closeAlertDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </div>
         <div id={descriptionId}>
           <p>
-            Oh no! This means there was an error.
+            This is an alert dialog! This is some critical information.
           </p>
         </div>
       </dialog>
