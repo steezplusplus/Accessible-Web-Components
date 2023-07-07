@@ -41,7 +41,7 @@ export function Accordion({ panels }: AccordionProps) {
 
   return (
     <div
-      className="rounded border border-black bg-slate-200 p-2"
+      className="flex w-full max-w-xl flex-col gap-y-1 rounded border border-black bg-slate-200 p-2"
     >
       {
         panels.map((panel, index) => {
@@ -51,7 +51,7 @@ export function Accordion({ panels }: AccordionProps) {
             <div key={index}>
               <h2 className="rounded border border-black hover:cursor-pointer">
                 <button
-                  className="flex w-full items-center px-1"
+                  className="flex w-full items-center px-2 py-1"
                   aria-expanded={isExpanded}
                   aria-controls={`content-${index}`}
                   id={`header-${index}`}
@@ -59,7 +59,7 @@ export function Accordion({ panels }: AccordionProps) {
                   onClick={handleClick}
                   onKeyDown={handleKeyDown}
                 >
-                  <span>{header}</span>
+                  <span className="mr-4 text-3xl font-semibold">{header}</span>
                   <FontAwesomeIcon
                     className="ml-auto"
                     icon={isExpanded ? faArrowAltCircleUp : faArrowAltCircleDown}

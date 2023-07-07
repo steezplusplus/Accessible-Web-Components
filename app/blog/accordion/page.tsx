@@ -40,7 +40,7 @@ export default function Page() {
           On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
-      <div className="mx-auto max-w-prose">
+      <div className="flex items-center justify-center">
         <Accordion panels={panels} />
       </div>
     </>
