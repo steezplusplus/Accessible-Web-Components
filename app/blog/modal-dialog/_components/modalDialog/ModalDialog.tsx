@@ -33,7 +33,7 @@ export function ModalDialog() {
         className="fixed top-1/4 h-fit rounded border border-black bg-slate-200 p-2 "
       >
         <div className="flex justify-center gap-x-4">
-          <h2 id={labelId} className="text-xl font-semibold">Hello!</h2>
+          <h2 id={labelId} className="text-3xl font-semibold">Hello!</h2>
           <button onClick={closeModalDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>

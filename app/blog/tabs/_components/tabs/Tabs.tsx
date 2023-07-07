@@ -75,8 +75,8 @@ export function Tabs(props: TabsProps) {
   };
 
   return (
-    <div className="rounded border border-black bg-slate-200 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
-      <h2 id="tabs-title" className="mb-2 text-3xl">{title}</h2>
+    <div className="max-w-xl rounded border border-black bg-slate-200 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
+      <h2 id="tabs-title" className="mb-2 text-3xl font-semibold">{title}</h2>
 
       <div>
         <ul className="mb-1 flex gap-x-2" aria-labelledby="tabs-title" role="tablist" ref={tabsRef}>
@@ -86,7 +86,7 @@ export function Tabs(props: TabsProps) {
             return (
               <li key={`tab-${i}`} role="presentation">
                 <a
-                  className="focus:text-violet-400 aria-selected:underline"
+                  className="aria-selected:underline"
                   id={`tab-${i}`}
                   href={`#section-${i}`}
                   tabIndex={isSelected ? 0 : -1}
