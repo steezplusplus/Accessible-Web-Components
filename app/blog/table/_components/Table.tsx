@@ -8,7 +8,7 @@ export function Table(props: TableProps) {
 
   return (
     <table>
-      <thead>
+      <thead className="text-3xl">
         <tr>
           {headers.map((header, i) =>
             <th scope="col" key={i}>{header}</th>
@@ -16,11 +16,9 @@ export function Table(props: TableProps) {
         </tr>
       </thead>
       <tbody>
-        {rows.map((row, i) =>
+        {rows.map((cell, i) =>
           <tr key={i}>
-            {row.map((cell: any, i: number) =>
-              <td key={i}>{cell}</td>
-            )}
+            <td key={i}>{cell.name}</td>
           </tr>
         )}
       </tbody>

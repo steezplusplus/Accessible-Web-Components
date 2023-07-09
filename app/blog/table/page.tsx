@@ -6,19 +6,12 @@ export const metadata = {
   description: 'Supporting resources to make the web accessible',
 };
 
-const headers = ['Band', 'Singer', 'Inception', 'Label'];
-
-const rows = [
-  ['Napalm Death', 'Barney Greenway', '1981', 'Century Media'],
-  ['Carcass', 'Jeff Walker', '1985', 'Earache'],
-  ['Extreme Noise Terror', 'Dean Jones', '1985', 'Candlelight'],
-  ['Discordance Axis', 'Jon Chang', '1992', 'Hydrahead']
-];
+const headers = ['Pokemon'];
 
 // TODO Loading, error fallbacks
 export default async function Page() {
-  const pokemon = await getPokemon();
-  console.log(pokemon); // TODO show pokemon
+  const pokemonMetadata = await getPokemon();
+  const pokemon = pokemonMetadata.results;
 
   return (
     <>
@@ -34,7 +27,7 @@ export default async function Page() {
         </p>
       </article>
       <div className="flex flex-col items-center justify-center gap-y-4">
-        <Table rows={rows} headers={headers} />
+        <Table rows={pokemon} headers={headers} />
       </div>
     </>
   );
