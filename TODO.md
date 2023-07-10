@@ -1,7 +1,6 @@
 # TODO
 
 - Get a Favicon
-- Update metadata object in each page for better SEO
 - Could <Header> be a part of the Root Layout?
 - A11y test with NVDA and VoiceOver
 - Publish to Github, add actions for testing, axe, lighthouse, dependabot, coveralls
@@ -10,7 +9,6 @@
 - confugre nested css? Remove all stylesheets?
 
 - Container queries tailwind package
-- make modal using <dialog>?
 - color fonts https://fonts.google.com/knowledge/introducing_type/introducing_color_fonts
 - downgrade typescript to 5.1.0 compatability issue with eslint
 
