@@ -30,7 +30,7 @@ export function NonModalDialog() {
         aria-labelledby={labelId}
         aria-describedby={descriptionId}
         autoFocus
-        className="fixed bottom-1/3 h-fit rounded border border-black bg-slate-200 p-2"
+        className="fixed bottom-[15%] h-fit rounded border border-black bg-slate-200 p-2"
       >
         <div className="flex items-center gap-x-4">
           <h2 id={labelId} className="mb-2 text-3xl font-semibold">Hello!</h2>

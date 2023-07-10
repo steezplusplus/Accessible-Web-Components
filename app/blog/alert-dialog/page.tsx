@@ -12,8 +12,12 @@ export default function Page() {
         <header>
           <h1>Alert Dialog</h1>
           <p>
-            An Alert Dialog is a descendant window of the primary application window that blocks interacting with the primary application window until
-            {' '} the user has responded to it. This makes a <i>modal dialog</i>, except to specifically notify the user with some critical information.
+            An Alert Dialog is a descendant window of the primary application window.
+            When open, the user may not interact with the primary application.
+          </p>
+          <p>
+            Press Tab and Shift+Tab while the Alert Dialog is open, and you will see{' '}
+            that the primary application window is not interactable.
           </p>
         </header>
         <p>

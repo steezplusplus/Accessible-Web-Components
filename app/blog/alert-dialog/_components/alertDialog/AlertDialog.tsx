@@ -29,7 +29,7 @@ export function AlertDialog() {
         ref={alertDialogRef}
         aria-labelledby={labelId}
         aria-describedby={descriptionId}
-        className="fixed top-1/4 h-fit rounded border border-black bg-red-400 p-2"
+        className="fixed top-1/2 h-fit rounded border border-black bg-red-400 p-2"
         role="alertdialog"
       >
         <div className="flex">

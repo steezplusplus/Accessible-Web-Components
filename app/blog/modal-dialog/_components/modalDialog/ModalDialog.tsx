@@ -30,7 +30,7 @@ export function ModalDialog() {
         aria-labelledby={labelId}
         aria-describedby={descriptionId}
         autoFocus
-        className="fixed top-1/4 h-fit rounded border border-black bg-slate-200 p-2 "
+        className="fixed top-1/2 h-fit rounded border border-black bg-slate-200 p-2 "
       >
         <div className="flex justify-center gap-x-4">
           <h2 id={labelId} className="text-3xl font-semibold">Hello!</h2>
