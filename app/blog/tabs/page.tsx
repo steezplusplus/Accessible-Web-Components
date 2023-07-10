@@ -31,6 +31,8 @@ export default function Page() {
         <p>
           A Tab will be automatically activated and its associated Tabpanel will be displayed when the Tab receives focus.
           This implementation assumes the first Tab and associated Tabpanel is always initially activated.
+        </p>
+        <p>
           Press Tab and Shift+Tab to navigate focus between the Tab and its associated Tabpanel.
           Press Left and Right arrows to navigate focus between the Tabs.
         </p>
