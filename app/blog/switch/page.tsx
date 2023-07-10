@@ -15,6 +15,9 @@ export default function Page() {
             A Switch is similar to a checkbox in that there there are two possible states, thus making them functionally interchangable.
             The difference is a switch is <i>on</i> or <i>off</i>, while a checkbox is <i>checked</i> or <i>unchecked</i>.
           </p>
+          <p>
+            Press Tab and Shift+Tab to focus the select, then press either Enter or Space to interact with it.
+          </p>
         </header>
         <p>
           On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
