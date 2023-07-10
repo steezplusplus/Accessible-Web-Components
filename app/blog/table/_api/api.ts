@@ -12,6 +12,11 @@ export interface Pokemon {
   url: string
 }
 
+export function preload() {
+  // void evaluates the given expression and returns undefined
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
+  void getPokemon();
+}
 
 export async function getPokemon(): Promise<PokemonMetadata> {
   const res = await fetch(`${api}/pokemon?limit=3`);

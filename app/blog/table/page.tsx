@@ -1,4 +1,4 @@
-import { getPokemon } from './_api/api';
+import { getPokemon, preload } from './_api/api';
 import { Table } from './_components/Table';
 
 export const metadata = {
@@ -10,6 +10,7 @@ const headers = ['Pokemon'];
 
 // TODO Loading, error fallbacks
 export default async function Page() {
+  preload();
   const pokemonMetadata = await getPokemon();
   const pokemon = pokemonMetadata.results;
 
