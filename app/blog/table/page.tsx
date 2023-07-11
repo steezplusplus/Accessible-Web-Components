@@ -10,8 +10,8 @@ const headers = ['Pokemon'];
 
 // TODO Loading, error fallbacks
 export default async function Page() {
-  preload();
-  const pokemonMetadata = await getPokemon();
+  preload({});
+  const pokemonMetadata = await getPokemon({});
   const pokemon = pokemonMetadata.results;
 
   return (
