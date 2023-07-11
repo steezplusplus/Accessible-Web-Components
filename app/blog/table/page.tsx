@@ -6,12 +6,12 @@ export const metadata = {
   description: 'Supporting resources to make the web accessible',
 };
 
-const headers = ['Pokemon'];
+const headers = ['Pokemon', 'Types'];
 
 // TODO Loading, error fallbacks
 export default async function Page() {
   preload({});
-  const pokemonMetadata = await getPokemon({});
+  const pokemonMetadata = await getPokemon({ limit: 5 });
   const pokemon = pokemonMetadata.results;
 
   return (
@@ -27,7 +27,7 @@ export default async function Page() {
           On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
-      <div className="flex flex-col items-center justify-center gap-y-4">
+      <div className="p-4">
         <Table rows={pokemon} headers={headers} />
       </div>
     </>

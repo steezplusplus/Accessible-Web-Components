@@ -10,20 +10,32 @@ export function Table(props: TableProps) {
   console.log(rows);
 
   return (
-    <table>
-      <thead className="text-3xl">
+    <table className="w-full rounded border text-left text-sm text-gray-500">
+      <thead className="bg-gray-100 text-xs uppercase text-gray-700">
         <tr>
-          {headers.map((header, i) =>
-            <th scope="col" key={i}>{header}</th>
-          )}
+          {
+            headers.map((header, i) => {
+              return (
+                <th scope="col" className="px-6 py-3 text-lg" key={`header-${i}`}>
+                  {header}
+                </th>
+              );
+            })
+          }
         </tr>
       </thead>
       <tbody>
-        {rows.map((cell, i) =>
-          <tr key={i}>
-            <td key={i}>{cell.name}</td>
-          </tr>
-        )}
+        {
+          rows.map((row, i) => {
+            return (
+              <tr key={`row-${i}`} className="border-b even:bg-gray-50">
+                <td className="px-6 py-4 capitalize">{row.name}</td>
+                <td>placeholder type</td>
+              </tr>
+            );
+          })
+        }
+
       </tbody>
     </table>
   );
