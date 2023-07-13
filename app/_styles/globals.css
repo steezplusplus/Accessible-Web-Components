@@ -12,6 +12,45 @@
   }
 }
 
+@layer utilities {
+  .polka1 {
+    background-color: transparent;
+    opacity: 0.6;
+    background-image: radial-gradient(#16a34a 0.8px, transparent 0.8px);
+    background-size: 16px 16px;
+  }
+
+  .polka2 {
+    background-color: transparent;
+    opacity: 0.6;
+    background-image:  radial-gradient(#16a34a 0.8px, transparent 0.8px), radial-gradient(#16a34a 0.8px, transparent 0.8px);
+    background-size: 32px 32px;
+    background-position: 0 0,16px 16px;
+    }
+
+  .isometric {
+    background-color: transparent;
+    opacity: 0.6;
+    background-image:  linear-gradient(30deg, #16a34a 12%, transparent 12.5%, transparent 87%, #16a34a 87.5%, #16a34a), linear-gradient(150deg, #16a34a 12%, transparent 12.5%, transparent 87%, #16a34a 87.5%, #16a34a), linear-gradient(30deg, #16a34a 12%, transparent 12.5%, transparent 87%, #16a34a 87.5%, #16a34a), linear-gradient(150deg, #16a34a 12%, transparent 12.5%, transparent 87%, #16a34a 87.5%, #16a34a), linear-gradient(60deg, #16a34a77 25%, transparent 25.5%, transparent 75%, #16a34a77 75%, #16a34a77), linear-gradient(60deg, #16a34a77 25%, transparent 25.5%, transparent 75%, #16a34a77 75%, #16a34a77);
+    background-size: 32px 56px;
+    background-position: 0 0, 0 0, 16px 28px, 16px 28px, 0 0, 16px 28px;
+  }
+
+  .zigzag {
+    background-color: transparent;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #16a34a55 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #16a34a 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #16a34a55 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #16a34a 25%, transparent 25%) 0px 0/ 20px 20px;
+  }
+
+  .triangle {
+    background-color: transparent;
+    opacity: 0.8;
+    background-image: linear-gradient(45deg, #16a34a 50%, transparent 50%);
+    background-size: 16px 16px;
+    }
+
+}
+
 :root {
   font-size: 1rem;
   font-family: 'Open Sans'; /* TODO Does this belong in @layer base? */
