@@ -1,5 +1,6 @@
 'use client';
 
+import { Disclosure } from '@/app/blog/_components/disclosure/Disclosure';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
@@ -24,7 +25,7 @@ export function AlertDialog() {
 
   return (
     <>
-      <button onClick={showAlertDialog} className="rounded border px-2 py-1 hover:bg-slate-100">Open Alert Dialog...</button>
+      <Disclosure handleClick={showAlertDialog} label="Open Alert Dialog..." />
       <dialog
         ref={alertDialogRef}
         aria-labelledby={labelId}
