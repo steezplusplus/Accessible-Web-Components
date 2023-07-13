@@ -1,6 +1,6 @@
 'use client';
 
-import { Disclosure } from '@/app/blog/_components/disclosure/Discolsure';
+import { Disclosure } from '@/app/blog/_components/disclosure/Disclosure';
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef } from 'react';
