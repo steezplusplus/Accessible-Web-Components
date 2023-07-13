@@ -1,4 +1,3 @@
-// import { Pagination } from './_components/pagination/Pagination'; // TODO or lazy load?
 import { Article } from './_components/article/Article';
 import { Header } from './_components/header/Header';
 
@@ -8,11 +7,11 @@ export const metadata = {
 };
 
 export default async function Blog() {
-  const tabsDescription = 'Tabs are a horizontal set of controls associated with a panel that will display one panel of content at a time.';
-  const accordionDescrpition = 'Accordions are a vertical set of controls associated with a panel that will display one panel of content at a time.';
-  const modalDescription = 'A Modal overlays the primary window with a modal window which does not allow the user to interact with primary window.';
-  const dialogDescription = 'A Modal Dialog overlays the primary window with a dialog window which allows the user to interact with either window.';
-  const alertDialogDescription = 'An Alert Dialog overlays the primary window which does not allow the user to interact with the primary window.';
+  const tabsDescription = 'Navigational element enabling switching between multiple content sections within the same interface.';
+  const accordionDescrpition = 'Collapsible sections to display content in a compact and organized manner.';
+  const modalDescription = 'Interruptive pop-up which does not allow the user to interact with primary window.';
+  const dialogDescription = 'Interruptive pop-up that includes user information that is not urgent.';
+  const alertDialogDescription = 'A modal dialog, specifically for displaying critical information or warnings to the user.';
   const switchDescription = 'A switch allows a user to toggle between one of two possible states: on & off.';
 
 
