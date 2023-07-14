@@ -75,7 +75,7 @@ export function Tabs(props: TabsProps) {
   };
 
   return (
-    <div className="max-w-xl rounded border border-black bg-slate-200 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
+    <div className="max-w-xl rounded border border-black bg-emerald-100 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
       <h2 id="tabs-title" className="mb-2 text-3xl font-semibold">{title}</h2>
 
       <div>

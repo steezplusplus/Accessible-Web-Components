@@ -20,7 +20,7 @@ export function Switch(props: SwitchProps) {
       type="button"
       aria-checked={ariaChecked}
       onClick={handleClick}
-      className="flex h-8 items-center justify-center rounded border border-black bg-slate-200 p-2"
+      className="flex h-8 items-center justify-center rounded border border-black bg-emerald-100 p-2"
     >
       <span>{label}</span>
       <svg xmlns="http://www.w3.org/2000/svg" height="20" width="36" className="ml-2">

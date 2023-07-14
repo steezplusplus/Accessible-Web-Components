@@ -41,7 +41,7 @@ export function Accordion({ panels }: AccordionProps) {
 
   return (
     <div
-      className="flex w-full max-w-xl flex-col gap-y-1 rounded border border-black bg-slate-200 p-2"
+      className="flex w-full max-w-xl flex-col gap-y-1 rounded border border-black bg-emerald-100 p-2"
     >
       {
         panels.map((panel, index) => {
