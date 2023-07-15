@@ -1,6 +1,24 @@
 
 export function Form() {
   return (
-    <form></form>
+    <form className="flex flex-col gap-y-2">
+      <div className="flex flex-col gap-y-0.5">
+        <label htmlFor="username">
+          Username
+        </label>
+        <input id="username" type="text"></input>
+      </div>
+      <div className="flex flex-col gap-y-0.5">
+        <label htmlFor="password">
+          Password
+        </label>
+        <input id="password" type="password"></input>
+      </div>
+      <button
+        className="rounded border bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700"
+      >
+        Submit
+      </button>
+    </form>
   );
 }

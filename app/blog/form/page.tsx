@@ -10,7 +10,9 @@ export default function Page() {
           TODO
         </p>
       </article>
-      <Form />
+      <div className="flex items-center justify-center">
+        <Form />
+      </div>
     </>
   );
 }
