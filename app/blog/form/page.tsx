@@ -10,7 +10,8 @@ export default function Page() {
           TODO
         </p>
       </article>
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-xl">Registration</h2>
         <Form />
       </div>
     </>

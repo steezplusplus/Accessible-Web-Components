@@ -1,17 +1,17 @@
 
-// TODO Add reveal password button
+// TODO Add reveal password button by swapping type="password" with type="text", toggle aria-pressed and styling
 export function Form() {
   return (
     <form className="flex flex-col gap-y-2">
       <div className="flex flex-col gap-y-0.5">
-        <label htmlFor="username">
-          Username
+        <label htmlFor="email">
+          Email
         </label>
-        <input id="username" type="text" name="username"></input>
+        <input id="email" type="email" name="email"></input>
       </div>
       <div className="flex flex-col gap-y-0.5">
         <label htmlFor="password">
-          <div>Password</div>
+          <div>Choose password</div>
           <div className="text-xs" >Must contain 8+ characters with at least 1 number and 1 uppercase letter.</div>
         </label>
         <input id="password" type="password" name="password"></input>
