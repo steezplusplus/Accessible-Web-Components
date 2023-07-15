@@ -10,7 +10,8 @@ export function Form() {
       </div>
       <div className="flex flex-col gap-y-0.5">
         <label htmlFor="password">
-          Password
+          <div>Password</div>
+          <div className="text-xs" >Must contain 8+ characters with at least 1 number and 1 uppercase letter.</div>
         </label>
         <input id="password" type="password"></input>
       </div>
