@@ -1,5 +1,9 @@
 import { RegistrationForm } from './_components/registrationForm/RegistrationForm';
 
+export const metadata = {
+  title: 'Steez++ | Registration Form',
+  description: 'Supporting resources to make the web accessible',
+};
 
 export default function Page() {
   return (

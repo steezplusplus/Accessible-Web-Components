@@ -20,6 +20,7 @@ export function RegistrationForm() {
     setShowPassword((prevState) => !prevState);
   };
 
+  // TODO On error, update the page title. Give an error summary at the top of the page
   const handleValidateForm = (e: React.FormEvent<HTMLFormElement>) => {
     console.log(formState);
     e.preventDefault();
