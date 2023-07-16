@@ -1,28 +1,54 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
+
+export type FormState = {
+  email: string;
+  password: string;
+}
+
+const initFormState: FormState = {
+  email: '',
+  password: '',
+};
 
 export function RegistrationForm() {
+  const [formState, setFormState] = useState<FormState>(initFormState);
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleShowPassword = () => {
     setShowPassword((prevState) => !prevState);
   };
 
+  const handleValidateForm = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log(formState);
+    e.preventDefault();
+  };
+
   return (
-    <form className="flex flex-col gap-y-3">
+    <form className="flex flex-col gap-y-3" onSubmit={(e) => handleValidateForm(e)}>
 
       <div className="flex flex-col gap-y-0.5">
         <label htmlFor="email">
           Email
         </label>
-        <input id="email" type="email" name="email"></input>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          onChange={(e) => {
+            setFormState((prevState) => ({
+              ...prevState,
+              email: e.target.value,
+            }));
+          }}
+        />
       </div>
 
       <div className="flex flex-col gap-y-0.5">
         <label htmlFor="password">
           <div>Choose password</div>
-          <div className="text-xs" >Must contain 8+ characters with at least 1 number and 1 uppercase letter.</div>
+          <div className="text-xs">Must contain 8+ characters with at least 1 number and 1 uppercase letter.</div>
         </label>
         <div className="flex">
           <input
@@ -30,6 +56,12 @@ export function RegistrationForm() {
             type={showPassword ? 'text' : 'password'}
             name="password"
             className="flex-1"
+            onChange={(e) => {
+              setFormState((prevState) => ({
+                ...prevState,
+                password: e.target.value,
+              }));
+            }}
           />
           <button
             type="button"
@@ -44,7 +76,6 @@ export function RegistrationForm() {
 
       <button
         className="rounded border bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700"
-        onClick={(e) => e.preventDefault()}
       >
         Join
       </button>
