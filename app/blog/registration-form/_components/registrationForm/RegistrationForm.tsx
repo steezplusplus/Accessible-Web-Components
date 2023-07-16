@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 
-// TODO Style pressed state of button
-export function Form() {
+export function RegistrationForm() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleShowPassword = () => {
@@ -45,6 +44,7 @@ export function Form() {
 
       <button
         className="rounded border bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700"
+        onClick={(e) => e.preventDefault()}
       >
         Submit
       </button>
