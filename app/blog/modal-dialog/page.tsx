@@ -21,7 +21,7 @@ export default function Page() {
           that the primary application window is not interactable.
         </p>
         <p>
-          On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
+          On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
       <div className="flex items-center justify-center">

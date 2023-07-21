@@ -18,7 +18,7 @@ export default function Page() {
           <li>Input validation</li>
         </ol>
         <p>
-          On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
+          On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article> */}
       <div className="my-4 flex flex-col items-center justify-center">

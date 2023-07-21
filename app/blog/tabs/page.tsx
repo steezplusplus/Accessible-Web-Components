@@ -37,7 +37,7 @@ export default function Page() {
           Press Left and Right arrows to navigate focus between the Tabs.
         </p>
         <p>
-          On MacOs, press Shift + F5 to enable VoiceOver and try it for yourself.
+          On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.
         </p>
       </article>
       <div className="flex items-center justify-center">
