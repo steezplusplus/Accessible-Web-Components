@@ -1,7 +1,7 @@
 import { ModalDialog } from './_components/modalDialog/ModalDialog';
 
 export const metadata = {
-  title: 'Steez++ | Modal Dialog',
+  title: 'Accessible Web Components | Modal Dialog',
   description: 'Supporting resources to make the web accessible',
 };
 

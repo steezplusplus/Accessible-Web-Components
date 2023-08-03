@@ -8,7 +8,7 @@ const openUiURL = 'https://open-ui.org/';
 export function About() {
   return (
     <article className="prose mx-auto my-8 sm:prose-sm md:prose-base lg:prose-lg xl:prose-xl">
-      <h2>What is Steez++?</h2>
+      <h2>What is Accessible Web Components?</h2>
       <p>
         A blog trying to make web accessability become more accessible knowledge.
       </p>

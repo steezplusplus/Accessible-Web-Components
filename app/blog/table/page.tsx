@@ -2,7 +2,7 @@ import { getPokemon, preload } from './_api/api';
 import { Table } from './_components/Table';
 
 export const metadata = {
-  title: 'Steez++ | Table',
+  title: 'Accessible Web Components | Table',
   description: 'Supporting resources to make the web accessible',
 };
 

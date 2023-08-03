@@ -1,7 +1,7 @@
 import { RegistrationForm } from './_components/registrationForm/RegistrationForm';
 
 export const metadata = {
-  title: 'Steez++ | Registration Form',
+  title: 'Accessible Web Components | Registration Form',
   description: 'Supporting resources to make the web accessible',
 };
 

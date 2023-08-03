@@ -11,7 +11,7 @@ export function Footer() {
       <ul className="flex h-full flex-col p-1 text-xs text-white">
         <li>
           <p>
-            &copy; {new Date().getFullYear()} Steez++
+            &copy; {new Date().getFullYear()} Accessible Web Components
           </p>
         </li>
         <li>

@@ -1,7 +1,7 @@
 import { AlertDialog } from './_components/alertDialog/AlertDialog';
 
 export const metadata = {
-  title: 'Steez++ | Alert Dialog',
+  title: 'Accessible Web Components | Alert Dialog',
   description: 'Supporting resources to make the web accessible',
 };
 

@@ -2,7 +2,7 @@ import { Header } from './_components/header/Header';
 import { About } from './_components/about/About';
 
 export const metadata = {
-  title: 'Steez++ | About',
+  title: 'Accessible Web Components | About',
   description: 'Supporting resources to make the web accessible',
 };
 

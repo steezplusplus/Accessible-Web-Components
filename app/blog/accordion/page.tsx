@@ -1,7 +1,7 @@
 import { Accordion, PanelProps } from './_components/panels/Accordion';
 
 export const metadata = {
-  title: 'Steez++ | Accordion',
+  title: 'Accessible Web Components | Accordion',
   description: 'Supporting resources to make the web accessible',
 };
 

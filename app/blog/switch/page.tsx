@@ -1,7 +1,7 @@
 import { Switch } from './_components/switch/Switch';
 
 export const metadata = {
-  title: 'Steez++ | Switch',
+  title: 'Accessible Web Components | Switch',
   description: 'Supporting resources to make the web accessible',
 };
 

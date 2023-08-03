@@ -1,7 +1,7 @@
 import { Tabs, TabsProps } from './_components/tabs/Tabs';
 
 export const metadata = {
-  title: 'Steez++ | Tabs',
+  title: 'Accessible Web Components | Tabs',
   description: 'Supporting resources to make the web accessible',
 };
 

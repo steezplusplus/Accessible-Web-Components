@@ -1,7 +1,7 @@
 import { NonModalDialog } from './_components/nonModalDialog/NonModalDialog';
 
 export const metadata = {
-  title: 'Steez++ | Non-Modal Dialog',
+  title: 'Accessible Web Components | Non-Modal Dialog',
   description: 'Supporting resources to make the web accessible',
 };
 
