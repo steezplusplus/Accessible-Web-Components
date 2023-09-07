@@ -1,4 +1,3 @@
-import { Services } from './_components/services/Services';
 import { Header } from './_components/header/Header';
 
 export const metadata = {
@@ -10,7 +9,6 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <Services />
     </>
   );
 }
