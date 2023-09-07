@@ -46,7 +46,7 @@
   </section>
   <section>
     <h2>Built with</h2>
-    <p>typescript - postcss - eslint - prettier - tailwind - vercel - nextjs13</p>
+    <p>typescript - postcss - eslint - prettier - tailwind - vercel - nextjs13 - mdx</p>
   </section>
   <br />
   <section>
