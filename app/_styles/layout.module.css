@@ -1,9 +1,9 @@
 .layout {
-  @apply h-screen grid;
+  @apply grid h-screen;
   grid-template:
-    "navbar" 3.5rem
-    "main" 1fr
-    "footer" 2.5rem;
+    'navbar' 3.5rem
+    'main' 1fr
+    'footer' 2.5rem;
 }
 
 .layout > navbar {

@@ -12,13 +12,15 @@ export default function Page() {
         <header>
           <h1>Non-Modal Dialog</h1>
           <p>
-            A Non-Modal Dialog is a descendant window of the primary application window.{' '}
-            When open, the user is not blocked from interacting with the primary application window.
-            Since it will not change the functionality of the web page, the user may ignore it alltogether.
+            A Non-Modal Dialog is a descendant window of the primary application
+            window. When open, the user is not blocked from interacting with the
+            primary application window. Since it will not change the
+            functionality of the web page, the user may ignore it alltogether.
           </p>
           <p>
-            Press Tab and Shift+Tab while the Non-Modal Dialog is open, and you will see{' '}
-            that the primary application window is interactable as normal.
+            Press Tab and Shift+Tab while the Non-Modal Dialog is open, and you
+            will see that the primary application window is interactable as
+            normal.
           </p>
         </header>
         <p>

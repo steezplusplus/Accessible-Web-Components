@@ -25,7 +25,10 @@ export function NonModalDialog() {
 
   return (
     <>
-      <Disclosure handleClick={showNonModalDialog} label="Open Non-Modal Dialog..." />
+      <Disclosure
+        handleClick={showNonModalDialog}
+        label="Open Non-Modal Dialog..."
+      />
       <dialog
         ref={nonModalDialogRef}
         aria-labelledby={labelId}
@@ -34,7 +37,9 @@ export function NonModalDialog() {
         className="fixed bottom-[15%] h-fit rounded border border-black bg-emerald-100 p-2"
       >
         <div className="flex justify-center gap-x-4">
-          <h2 id={labelId} className="mb-2 text-3xl font-semibold">Hello!</h2>
+          <h2 id={labelId} className="mb-2 text-3xl font-semibold">
+            Hello!
+          </h2>
           <button onClick={closeNonModalDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
@@ -44,7 +49,8 @@ export function NonModalDialog() {
             This is a non-modal dialog! It does not any user interatcion.
           </p>
           <p>
-            Press and hold Tab, see that focus cycles throughout the entire application window.
+            Press and hold Tab, see that focus cycles throughout the entire
+            application window.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export type SwitchProps = {
   label: string;
-}
+};
 
 export function Switch(props: SwitchProps) {
   const { label } = props;
@@ -23,15 +23,38 @@ export function Switch(props: SwitchProps) {
       className="flex h-8 items-center justify-center rounded border border-black bg-emerald-100 p-2"
     >
       <span>{label}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="36" className="ml-2">
-        <rect className="fill-white stroke-black" x="1" y="1" width="34" height="18" rx="4" ></rect>
-        <rect className={ariaChecked ? 'hidden' : ''} x="4" y="4" width="12" height="12" rx="4"></rect>
-        <rect className={ariaChecked ? 'fill-green-600' : 'hidden'} x="20" y="4" width="12" height="12" rx="4"></rect>
-      </svg>
-      <span
-        aria-hidden={ariaChecked}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="20"
+        width="36"
         className="ml-2"
       >
+        <rect
+          className="fill-white stroke-black"
+          x="1"
+          y="1"
+          width="34"
+          height="18"
+          rx="4"
+        ></rect>
+        <rect
+          className={ariaChecked ? 'hidden' : ''}
+          x="4"
+          y="4"
+          width="12"
+          height="12"
+          rx="4"
+        ></rect>
+        <rect
+          className={ariaChecked ? 'fill-green-600' : 'hidden'}
+          x="20"
+          y="4"
+          width="12"
+          height="12"
+          rx="4"
+        ></rect>
+      </svg>
+      <span aria-hidden={ariaChecked} className="ml-2">
         {ariaChecked ? 'On' : 'Off'}
       </span>
     </button>

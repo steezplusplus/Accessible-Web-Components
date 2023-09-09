@@ -34,15 +34,15 @@ export function AlertDialog() {
         role="alertdialog"
       >
         <div className="flex">
-          <h2 id={labelId} className="mb-2 text-3xl font-semibold">Oh no!</h2>
+          <h2 id={labelId} className="mb-2 text-3xl font-semibold">
+            Oh no!
+          </h2>
           <button onClick={closeAlertDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </div>
         <div id={descriptionId}>
-          <p>
-            This is an alert dialog! This is some critical information.
-          </p>
+          <p>This is an alert dialog! This is some critical information.</p>
         </div>
       </dialog>
     </>

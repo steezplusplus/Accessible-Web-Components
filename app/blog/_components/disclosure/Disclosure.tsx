@@ -3,7 +3,7 @@ import React from 'react';
 export type DisclosureProps = {
   label: string;
   handleClick: () => void;
-}
+};
 
 export function Disclosure(props: DisclosureProps) {
   const { label, handleClick } = props;

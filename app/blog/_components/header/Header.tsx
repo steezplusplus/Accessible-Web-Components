@@ -6,7 +6,9 @@ export function Header() {
           <h1 className="text-7xl leading-tight text-white">Blog</h1>
         </li>
         <li>
-          <h2 className="text-white">Learn a11y and frontend dev with these articles</h2>
+          <h2 className="text-white">
+            Learn a11y and frontend dev with these articles
+          </h2>
         </li>
       </ul>
     </header>

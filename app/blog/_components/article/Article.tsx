@@ -19,6 +19,6 @@ export function Article(props: ArticleProps) {
         </Link>
       </h2>
       <p className="font-light">{description}</p>
-    </li >
+    </li>
   );
 }

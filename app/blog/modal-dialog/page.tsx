@@ -13,12 +13,13 @@ export default function Page() {
           <h1>Modal Dialog</h1>
         </header>
         <p>
-          A Modal Dialog is a descendant window of the primary application window.{' '}
-          When open, the user may no longer interact with the primary application window.
+          A Modal Dialog is a descendant window of the primary application
+          window. When open, the user may no longer interact with the primary
+          application window.
         </p>
         <p>
-          Press Tab and Shift+Tab while the Modal Dialog is open, and you will see{' '}
-          that the primary application window is not interactable.
+          Press Tab and Shift+Tab while the Modal Dialog is open, and you will
+          see that the primary application window is not interactable.
         </p>
         <p>
           On MacOs, press CMD + F5 to enable VoiceOver and try it for yourself.

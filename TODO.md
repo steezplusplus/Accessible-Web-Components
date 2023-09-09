@@ -13,6 +13,7 @@
 - downgrade typescript to 5.1.0 compatability issue with eslint
 
 - Why not use <details> element for the accordion?
+
   - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 
 - Typography package on blog posts?: https://tailwindcss.com/docs/typography-plugin

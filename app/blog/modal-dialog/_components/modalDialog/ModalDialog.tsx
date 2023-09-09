@@ -25,7 +25,10 @@ export function ModalDialog() {
 
   return (
     <>
-      <Disclosure handleClick={showModalDialog} label="Open a Modal Dialog..." />
+      <Disclosure
+        handleClick={showModalDialog}
+        label="Open a Modal Dialog..."
+      />
       <dialog
         ref={modaDialogRef}
         aria-labelledby={labelId}
@@ -34,17 +37,21 @@ export function ModalDialog() {
         className="fixed top-1/2 h-fit rounded border border-black bg-emerald-100 p-2 "
       >
         <div className="flex justify-center gap-x-4">
-          <h2 id={labelId} className="mb-2 text-3xl font-semibold">Hello!</h2>
+          <h2 id={labelId} className="mb-2 text-3xl font-semibold">
+            Hello!
+          </h2>
           <button onClick={closeModalDialog} className="ml-auto">
             <FontAwesomeIcon icon={faCircleXmark} />
           </button>
         </div>
         <div id={descriptionId} className="mb-2 font-light">
           <p className="mb-1">
-            This is a modal dialog! It blocks user interaction with the primary application window.
+            This is a modal dialog! It blocks user interaction with the primary
+            application window.
           </p>
           <p>
-            Press and hold Tab, see that you cannot focus elements outside this window.
+            Press and hold Tab, see that you cannot focus elements outside this
+            window.
           </p>
         </div>
         <button

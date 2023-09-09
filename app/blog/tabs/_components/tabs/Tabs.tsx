@@ -5,12 +5,12 @@ import React, { useState, useRef } from 'react';
 export type TabsProps = {
   title: string;
   tabs: TabProps[];
-}
+};
 
 export type TabProps = {
   title: string;
   content: string;
-}
+};
 
 export function Tabs(props: TabsProps) {
   const { title, tabs } = props;
@@ -45,7 +45,9 @@ export function Tabs(props: TabsProps) {
   };
 
   const moveLeft = () => {
-    const currentTabIndex = parseInt(selectedTab.charAt(selectedTab.length - 1));
+    const currentTabIndex = parseInt(
+      selectedTab.charAt(selectedTab.length - 1)
+    );
     let newTabIndex;
     if (currentTabIndex === 0) {
       newTabIndex = tabs.length - 1;
@@ -54,13 +56,17 @@ export function Tabs(props: TabsProps) {
     }
 
     const newTabKey = `#section-${newTabIndex}`;
-    const newTabElement = tabsRef.current?.querySelector(`a[href="${newTabKey}"]`) as HTMLAnchorElement;
+    const newTabElement = tabsRef.current?.querySelector(
+      `a[href="${newTabKey}"]`
+    ) as HTMLAnchorElement;
     setSelectedTab(newTabKey);
     newTabElement.focus();
   };
 
   const moveRight = () => {
-    const currentTabIndex = parseInt(selectedTab.charAt(selectedTab.length - 1));
+    const currentTabIndex = parseInt(
+      selectedTab.charAt(selectedTab.length - 1)
+    );
     let newTabIndex;
     if (currentTabIndex === tabs.length - 1) {
       newTabIndex = 0;
@@ -69,17 +75,30 @@ export function Tabs(props: TabsProps) {
     }
 
     const newTabKey = `#section-${newTabIndex}`;
-    const newTabElement = tabsRef.current?.querySelector(`a[href="${newTabKey}"]`) as HTMLAnchorElement;
+    const newTabElement = tabsRef.current?.querySelector(
+      `a[href="${newTabKey}"]`
+    ) as HTMLAnchorElement;
     setSelectedTab(newTabKey);
     newTabElement.focus();
   };
 
   return (
-    <div className="max-w-xl rounded border border-black bg-emerald-100 p-2" onClick={handleClick} onKeyDown={handleKeyDown}>
-      <h2 id="tabs-title" className="mb-2 text-3xl font-semibold">{title}</h2>
+    <div
+      className="max-w-xl rounded border border-black bg-emerald-100 p-2"
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+    >
+      <h2 id="tabs-title" className="mb-2 text-3xl font-semibold">
+        {title}
+      </h2>
 
       <div>
-        <ul className="mb-1 flex gap-x-2" aria-labelledby="tabs-title" role="tablist" ref={tabsRef}>
+        <ul
+          className="mb-1 flex gap-x-2"
+          aria-labelledby="tabs-title"
+          role="tablist"
+          ref={tabsRef}
+        >
           {tabs.map((tab, i) => {
             const { title } = tab;
             const isSelected = selectedTab === `#section-${i}`;
@@ -101,7 +120,10 @@ export function Tabs(props: TabsProps) {
           })}
         </ul>
 
-        <div className="hidden" id="focus-hint">Press tab to move to the tabpanel. Press left or right arrow to move between tabs.</div>
+        <div className="hidden" id="focus-hint">
+          Press tab to move to the tabpanel. Press left or right arrow to move
+          between tabs.
+        </div>
 
         {tabs.map((tab, i) => {
           const { content } = tab;

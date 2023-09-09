@@ -10,7 +10,8 @@ export function Footer() {
     <ul className="flex h-full flex-col items-center justify-center px-4 text-sm sm:flex-row sm:justify-between sm:px-6 lg:px-8">
       <li>
         <p>
-          &copy; {new Date().getFullYear()} Accessible Web Components. <i>Supporting resources to make the web accessible</i>.
+          &copy; {new Date().getFullYear()} Accessible Web Components.{' '}
+          <i>Supporting resources to make the web accessible</i>.
         </p>
       </li>
       <li className="ml-auto mr-2">

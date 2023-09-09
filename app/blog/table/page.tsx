@@ -20,7 +20,8 @@ export default async function Page() {
         <header>
           <h1>Table</h1>
           <p>
-            Data tables are used to organize data with a logical relationship in grids.
+            Data tables are used to organize data with a logical relationship in
+            grids.
           </p>
         </header>
         <p>

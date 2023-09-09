@@ -12,11 +12,14 @@ export default function Page() {
         <header>
           <h1>Switch</h1>
           <p>
-            A Switch is similar to a checkbox in that there there are two possible states, thus making them functionally interchangable.
-            The difference is a switch is <i>on</i> or <i>off</i>, while a checkbox is <i>checked</i> or <i>unchecked</i>.
+            A Switch is similar to a checkbox in that there there are two
+            possible states, thus making them functionally interchangable. The
+            difference is a switch is <i>on</i> or <i>off</i>, while a checkbox
+            is <i>checked</i> or <i>unchecked</i>.
           </p>
           <p>
-            Press Tab and Shift+Tab to focus the select, then press either Enter or Space to interact with it.
+            Press Tab and Shift+Tab to focus the select, then press either Enter
+            or Space to interact with it.
           </p>
         </header>
         <p>

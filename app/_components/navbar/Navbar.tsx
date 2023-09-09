@@ -12,6 +12,6 @@ export function Navbar() {
       <li className="ml-3">
         <NavLink href="/blog" name="Blog" />
       </li>
-    </ul >
+    </ul>
   );
 }
