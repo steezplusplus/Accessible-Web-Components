@@ -13,7 +13,7 @@ export function Article(props: ArticleProps) {
       <h2 className="mb-2 border-b">
         <Link
           className="text-2xl font-bold tracking-tight text-blue-900 hover:underline"
-          href={`/blog/${slug}`}
+          href={`/${slug}`}
         >
           {title}
         </Link>
