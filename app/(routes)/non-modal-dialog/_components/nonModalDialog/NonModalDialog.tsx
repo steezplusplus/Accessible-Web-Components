@@ -46,7 +46,8 @@ export function NonModalDialog() {
         </div>
         <div id={descriptionId} className="mb-2 max-w-[60ch] font-light">
           <p className="mb-1">
-            This is a non-modal dialog! It does not any user interatcion.
+            This is a non-modal dialog! It does not interrupt any user
+            interatcion.
           </p>
           <p>
             Press and hold Tab, see that focus cycles throughout the entire
